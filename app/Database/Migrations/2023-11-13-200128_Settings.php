@@ -9,7 +9,7 @@ class Companies extends Migration
     public function up()
     {
         $this->forge->addField([
-            'id'            => ['type' => 'CHAR', 'constraint' => 8],
+            'id'            => ['type' => 'CHAR', 'constraint' => 10],
             'company_name'  => ['type' => 'VARCHAR', 'constraint' => 255],
             'company_logo'  => ['type' => 'VARCHAR', 'constraint' => 255, 'null' => true],
             'sales_tax'     => ['type' => 'INT', 'constraint' => 3],

@@ -9,7 +9,7 @@ class Suppliers extends Migration
     public function up()
     {
         $this->forge->addField([
-            'id'         => ['type' => 'CHAR', 'constraint' => 8],
+            'id'         => ['type' => 'CHAR', 'constraint' => 10],
             'name'       => ['type' => 'VARCHAR', 'constraint' => 255],
             'email'      => ['type' => 'VARCHAR', 'constraint' => 255],
             'phone'      => ['type' => 'VARCHAR', 'constraint' => 20],
