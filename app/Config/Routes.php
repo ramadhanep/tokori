@@ -39,6 +39,14 @@ $routes->get('/profile', 'ProfileController::index', ['filter' => 'authuserfilte
 $routes->post('/profile', 'ProfileController::save', ['filter' => 'authuserfilter']);
 $routes->post('/profile/change-password', 'ProfileController::changePassword', ['filter' => 'authuserfilter']);
 
+// user
+$routes->get('users', 'UserController::index', ['filter' => 'authusermanajerfilter']);
+$routes->get('users/create', 'UserController::create', ['filter' => 'authusermanajerfilter']);
+$routes->post('users/create', 'UserController::store', ['filter' => 'authusermanajerfilter']);
+$routes->get('users/edit/(:segment)', 'UserController::edit/$1', ['filter' => 'authusermanajerfilter']);
+$routes->post('users/update/(:segment)', 'UserController::update/$1', ['filter' => 'authusermanajerfilter']);
+$routes->post('users/update-password/(:segment)', 'UserController::updatePassword/$1', ['filter' => 'authusermanajerfilter']);
+$routes->get('users/delete/(:segment)', 'UserController::delete/$1', ['filter' => 'authusermanajerfilter']);
 // product categories
 $routes->get('master/product-categories', 'ProductCategoryController::index', ['filter' => 'authusermanajerfilter']);
 $routes->post('master/product-categories', 'ProductCategoryController::store', ['filter' => 'authusermanajerfilter']);
@@ -61,15 +69,11 @@ $routes->get('master/payment-methods', 'PaymentMethodController::index', ['filte
 $routes->post('master/payment-methods', 'PaymentMethodController::store', ['filter' => 'authusermanajerfilter']);
 $routes->post('master/payment-methods/update/(:segment)', 'PaymentMethodController::update/$1', ['filter' => 'authusermanajerfilter']);
 $routes->get('master/payment-methods/delete/(:segment)', 'PaymentMethodController::delete/$1', ['filter' => 'authusermanajerfilter']);
-// user
-$routes->get('users', 'UserController::index', ['filter' => 'authusermanajerfilter']);
-$routes->get('users/create', 'UserController::create', ['filter' => 'authusermanajerfilter']);
-$routes->post('users/create', 'UserController::store', ['filter' => 'authusermanajerfilter']);
-$routes->get('users/edit/(:segment)', 'UserController::edit/$1', ['filter' => 'authusermanajerfilter']);
-$routes->post('users/update/(:segment)', 'UserController::update/$1', ['filter' => 'authusermanajerfilter']);
-$routes->post('users/update-password/(:segment)', 'UserController::updatePassword/$1', ['filter' => 'authusermanajerfilter']);
-$routes->get('users/delete/(:segment)', 'UserController::delete/$1', ['filter' => 'authusermanajerfilter']);
-
+// suppliers
+$routes->get('master/suppliers', 'SupplierController::index', ['filter' => 'authusermanajerfilter']);
+$routes->post('master/suppliers', 'SupplierController::store', ['filter' => 'authusermanajerfilter']);
+$routes->post('master/suppliers/update/(:segment)', 'SupplierController::update/$1', ['filter' => 'authusermanajerfilter']);
+$routes->get('master/suppliers/delete/(:segment)', 'SupplierController::delete/$1', ['filter' => 'authusermanajerfilter']);
 
 /*
  * --------------------------------------------------------------------

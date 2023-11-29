@@ -41,12 +41,6 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
     </li>
     <?php if ($profile['role'] == 'Manajer') : ?>
       <li class="menu-header small text-uppercase"><span class="menu-header-text">Manajemen</span></li>
-      <li class="menu-item <?= is_active_menu('master/payment-methods'); ?>">
-        <a href="<?= site_url('master/payment-methods'); ?>" class="menu-link">
-          <i class="menu-icon tf-icons bx bxs-bank"></i>
-          <div data-i18n="Without menu">Metode Pembayaran</div>
-        </a>
-      </li>
       <li class="menu-item <?= is_active_menu('master/products'); ?> <?= is_active_menu('master/product-categories'); ?>">
         <a href="javascript:void(0)" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-copy"></i>
@@ -69,6 +63,18 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
             </a>
           </li>
         </ul>
+      </li>
+      <li class="menu-item <?= is_active_menu('master/suppliers'); ?>">
+        <a href="<?= site_url('master/suppliers'); ?>" class="menu-link">
+          <i class="menu-icon tf-icons bx bxs-user-voice"></i>
+          <div data-i18n="Without menu">Supplier</div>
+        </a>
+      </li>
+      <li class="menu-item <?= is_active_menu('master/payment-methods'); ?>">
+        <a href="<?= site_url('master/payment-methods'); ?>" class="menu-link">
+          <i class="menu-icon tf-icons bx bxs-bank"></i>
+          <div data-i18n="Without menu">Metode Pembayaran</div>
+        </a>
       </li>
     <?php endif; ?>
     <?php if ($profile['role'] == 'Manajer') : ?>
