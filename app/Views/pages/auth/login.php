@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <div class="d-flex align-items-center mb-4">
                         <img src="/logo.png" alt="Tokori" class="w-brand">
-                        <span class="app-brand-text demo menu-text fw-bolder ms-2 text-primary">Tokori.</span>
+                        <span class="app-brand-text demo menu-text fw-bolder ms-2 text-primary">Tokori</span>
                     </div>
                     <p class="mb-4">Silahkan login untuk melanjutkan</p>
                     <?php if (session()->getFlashdata('error')) : ?>

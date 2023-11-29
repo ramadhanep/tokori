@@ -24,7 +24,7 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
   <div class="app-brand demo">
     <a href="<?= site_url('/') ?>" class="app-brand-link">
       <img src="/logo.png" alt="Tokori" class="w-brand">
-      <span class="app-brand-text demo menu-text fw-bolder ms-2 text-primary">Tokori.</span>
+      <span class="app-brand-text demo menu-text fw-bolder ms-2 text-primary">Tokori</span>
     </a>
 
     <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -32,7 +32,7 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
     </a>
   </div>
   <div class="menu-inner-shadow"></div>
-  <ul class="menu-inner py-1">
+  <ul class="mt-2 menu-inner py-1">
     <li class="menu-item <?= is_root_path(); ?>">
       <a href="<?= site_url('/'); ?>" class="menu-link">
         <i class="menu-icon tf-icons bx bxs-home-circle"></i>
