@@ -63,6 +63,11 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
               <div data-i18n="Text Divider">Kategori</div>
             </a>
           </li>
+          <li class="menu-item <?= is_active_menu('master/product-units'); ?>">
+            <a href="<?= site_url('master/product-units'); ?>" class="menu-link">
+              <div data-i18n="Text Divider">Unit</div>
+            </a>
+          </li>
         </ul>
       </li>
     <?php endif; ?>
