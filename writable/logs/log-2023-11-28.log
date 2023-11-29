@@ -1,0 +1,537 @@
+ERROR - 2023-11-28 01:10:46 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'tokori' in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query()
+#4 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#5 /home/dyvue/Documents/campus/tokori/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /home/dyvue/Documents/campus/tokori/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /home/dyvue/Documents/campus/tokori/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#9 /home/dyvue/Documents/campus/tokori/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#10 /home/dyvue/Documents/campus/tokori/spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'tokori' in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#4 /home/dyvue/Documents/campus/tokori/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists()
+#5 /home/dyvue/Documents/campus/tokori/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /home/dyvue/Documents/campus/tokori/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#7 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#8 /home/dyvue/Documents/campus/tokori/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /home/dyvue/Documents/campus/tokori/spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+CRITICAL - 2023-11-28 01:11:00 --> Cannot declare class App\Database\Migrations\ProductCategories, because the name is already in use
+in APPPATH/Database/Migrations/2023-11-27-165152_ProductUnits.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-11-28 01:38:48 --> mysqli_sql_exception: Table 'tokori.menu_categories' doesn't exist in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query()
+#4 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute()
+#5 /home/dyvue/Documents/campus/tokori/app/Database/Seeds/ProductCategorySeeder.php(133): CodeIgniter\Database\BaseBuilder->insertBatch()
+#6 /home/dyvue/Documents/campus/tokori/system/Database/Seeder.php(146): App\Database\Seeds\ProductCategorySeeder->run()
+#7 /home/dyvue/Documents/campus/tokori/app/Database/Seeds/MainSeeder.php(12): CodeIgniter\Database\Seeder->call()
+#8 /home/dyvue/Documents/campus/tokori/system/Database/Seeder.php(146): App\Database\Seeds\MainSeeder->run()
+#9 /home/dyvue/Documents/campus/tokori/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /home/dyvue/Documents/campus/tokori/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /home/dyvue/Documents/campus/tokori/spark(97): CodeIgniter\CLI\Console->run()
+#13 {main}
+ERROR - 2023-11-28 01:39:47 --> mysqli_sql_exception: Unknown column 'name' in 'field list' in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query()
+#4 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute()
+#5 /home/dyvue/Documents/campus/tokori/app/Database/Seeds/PaymentMethodSeeder.php(55): CodeIgniter\Database\BaseBuilder->insertBatch()
+#6 /home/dyvue/Documents/campus/tokori/system/Database/Seeder.php(146): App\Database\Seeds\PaymentMethodSeeder->run()
+#7 /home/dyvue/Documents/campus/tokori/app/Database/Seeds/MainSeeder.php(14): CodeIgniter\Database\Seeder->call()
+#8 /home/dyvue/Documents/campus/tokori/system/Database/Seeder.php(146): App\Database\Seeds\MainSeeder->run()
+#9 /home/dyvue/Documents/campus/tokori/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /home/dyvue/Documents/campus/tokori/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /home/dyvue/Documents/campus/tokori/spark(97): CodeIgniter\CLI\Console->run()
+#13 {main}
+ERROR - 2023-11-28 01:40:36 --> mysqli_sql_exception: Unknown table 'tokori.products' in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/Forge.php(637): CodeIgniter\Database\BaseConnection->query()
+#4 /home/dyvue/Documents/campus/tokori/app/Database/Migrations/2023-11-27-165204_Products.php(31): CodeIgniter\Database\Forge->dropTable()
+#5 /home/dyvue/Documents/campus/tokori/system/Database/MigrationRunner.php(877): App\Database\Migrations\Products->down()
+#6 /home/dyvue/Documents/campus/tokori/system/Database/MigrationRunner.php(299): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /home/dyvue/Documents/campus/tokori/system/Commands/Database/MigrateRollback.php(92): CodeIgniter\Database\MigrationRunner->regress()
+#8 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run()
+#9 /home/dyvue/Documents/campus/tokori/system/CLI/BaseCommand.php(114): CodeIgniter\CLI\Commands->run()
+#10 /home/dyvue/Documents/campus/tokori/system/Commands/Database/MigrateRefresh.php(84): CodeIgniter\CLI\BaseCommand->call()
+#11 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#12 /home/dyvue/Documents/campus/tokori/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#13 /home/dyvue/Documents/campus/tokori/spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-11-28 01:40:41 --> mysqli_sql_exception: Unknown table 'tokori.products' in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/Forge.php(637): CodeIgniter\Database\BaseConnection->query()
+#4 /home/dyvue/Documents/campus/tokori/app/Database/Migrations/2023-11-27-165204_Products.php(31): CodeIgniter\Database\Forge->dropTable()
+#5 /home/dyvue/Documents/campus/tokori/system/Database/MigrationRunner.php(877): App\Database\Migrations\Products->down()
+#6 /home/dyvue/Documents/campus/tokori/system/Database/MigrationRunner.php(299): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /home/dyvue/Documents/campus/tokori/system/Commands/Database/MigrateRollback.php(92): CodeIgniter\Database\MigrationRunner->regress()
+#8 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run()
+#9 /home/dyvue/Documents/campus/tokori/system/CLI/BaseCommand.php(114): CodeIgniter\CLI\Commands->run()
+#10 /home/dyvue/Documents/campus/tokori/system/Commands/Database/MigrateRefresh.php(84): CodeIgniter\CLI\BaseCommand->call()
+#11 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#12 /home/dyvue/Documents/campus/tokori/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#13 /home/dyvue/Documents/campus/tokori/spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-11-28 01:40:50 --> mysqli_sql_exception: Duplicate entry 'PC00000001' for key 'product_categories.PRIMARY' in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query()
+#4 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute()
+#5 /home/dyvue/Documents/campus/tokori/app/Database/Seeds/ProductCategorySeeder.php(133): CodeIgniter\Database\BaseBuilder->insertBatch()
+#6 /home/dyvue/Documents/campus/tokori/system/Database/Seeder.php(146): App\Database\Seeds\ProductCategorySeeder->run()
+#7 /home/dyvue/Documents/campus/tokori/app/Database/Seeds/MainSeeder.php(12): CodeIgniter\Database\Seeder->call()
+#8 /home/dyvue/Documents/campus/tokori/system/Database/Seeder.php(146): App\Database\Seeds\MainSeeder->run()
+#9 /home/dyvue/Documents/campus/tokori/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /home/dyvue/Documents/campus/tokori/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /home/dyvue/Documents/campus/tokori/spark(97): CodeIgniter\CLI\Console->run()
+#13 {main}
+ERROR - 2023-11-28 01:41:06 --> mysqli_sql_exception: Unknown table 'tokori.products' in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/Forge.php(637): CodeIgniter\Database\BaseConnection->query()
+#4 /home/dyvue/Documents/campus/tokori/app/Database/Migrations/2023-11-27-165204_Products.php(31): CodeIgniter\Database\Forge->dropTable()
+#5 /home/dyvue/Documents/campus/tokori/system/Database/MigrationRunner.php(877): App\Database\Migrations\Products->down()
+#6 /home/dyvue/Documents/campus/tokori/system/Database/MigrationRunner.php(299): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /home/dyvue/Documents/campus/tokori/system/Commands/Database/MigrateRollback.php(92): CodeIgniter\Database\MigrationRunner->regress()
+#8 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run()
+#9 /home/dyvue/Documents/campus/tokori/system/CLI/BaseCommand.php(114): CodeIgniter\CLI\Commands->run()
+#10 /home/dyvue/Documents/campus/tokori/system/Commands/Database/MigrateRefresh.php(84): CodeIgniter\CLI\BaseCommand->call()
+#11 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#12 /home/dyvue/Documents/campus/tokori/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#13 /home/dyvue/Documents/campus/tokori/spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-11-28 01:41:25 --> mysqli_sql_exception: Unknown table 'tokori.products' in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/Forge.php(637): CodeIgniter\Database\BaseConnection->query()
+#4 /home/dyvue/Documents/campus/tokori/app/Database/Migrations/2023-11-27-165204_Products.php(31): CodeIgniter\Database\Forge->dropTable()
+#5 /home/dyvue/Documents/campus/tokori/system/Database/MigrationRunner.php(877): App\Database\Migrations\Products->down()
+#6 /home/dyvue/Documents/campus/tokori/system/Database/MigrationRunner.php(299): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /home/dyvue/Documents/campus/tokori/system/Commands/Database/MigrateRollback.php(92): CodeIgniter\Database\MigrationRunner->regress()
+#8 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run()
+#9 /home/dyvue/Documents/campus/tokori/system/CLI/BaseCommand.php(114): CodeIgniter\CLI\Commands->run()
+#10 /home/dyvue/Documents/campus/tokori/system/Commands/Database/MigrateRefresh.php(84): CodeIgniter\CLI\BaseCommand->call()
+#11 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#12 /home/dyvue/Documents/campus/tokori/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#13 /home/dyvue/Documents/campus/tokori/spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-11-28 01:41:49 --> mysqli_sql_exception: Unknown column 'name' in 'field list' in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query()
+#4 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute()
+#5 /home/dyvue/Documents/campus/tokori/app/Database/Seeds/PaymentMethodSeeder.php(55): CodeIgniter\Database\BaseBuilder->insertBatch()
+#6 /home/dyvue/Documents/campus/tokori/system/Database/Seeder.php(146): App\Database\Seeds\PaymentMethodSeeder->run()
+#7 /home/dyvue/Documents/campus/tokori/app/Database/Seeds/MainSeeder.php(14): CodeIgniter\Database\Seeder->call()
+#8 /home/dyvue/Documents/campus/tokori/system/Database/Seeder.php(146): App\Database\Seeds\MainSeeder->run()
+#9 /home/dyvue/Documents/campus/tokori/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /home/dyvue/Documents/campus/tokori/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /home/dyvue/Documents/campus/tokori/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /home/dyvue/Documents/campus/tokori/spark(97): CodeIgniter\CLI\Console->run()
+#13 {main}
+INFO - 2023-11-28 01:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 01:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 01:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 01:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-28 01:43:31 --> mysqli_sql_exception: Table 'tokori.transactions' doesn't exist in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+#4 /home/dyvue/Documents/campus/tokori/system/Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /home/dyvue/Documents/campus/tokori/app/Controllers/DashboardController.php(20): CodeIgniter\Model->countAllResults()
+#6 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(934): App\Controllers\DashboardController->index()
+#7 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/dyvue/Documents/campus/tokori/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /home/dyvue/Documents/campus/tokori/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-11-28 01:43:31 --> Table 'tokori.transactions' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH/Controllers/DashboardController.php(20): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 01:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 01:47:52 --> Class "App\Models\Transaction" not found
+in APPPATH/Controllers/DashboardController.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->index()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 01:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 01:47:52 --> Class "App\Models\Transaction" not found
+in APPPATH/Controllers/DashboardController.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->index()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 01:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 01:47:52 --> Class "App\Models\Transaction" not found
+in APPPATH/Controllers/DashboardController.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->index()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 01:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 01:48:23 --> Undefined variable $transactionCount
+in APPPATH/Views/pages/home.php on line 17.
+ 1 APPPATH/Views/pages/home.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/home.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/DashboardController.php(21): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 01:48:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 01:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 01:50:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 01:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 01:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 01:50:54 --> Undefined variable $menuCategories
+in APPPATH/Views/pages/product-category/index.php on line 25.
+ 1 APPPATH/Views/pages/product-category/index.php(25): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/product-category/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProductCategoryController.php(16): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ProductCategoryController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 01:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 01:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 01:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 01:53:57 --> Undefined array key "is_best_seller"
+in APPPATH/Views/pages/product/index.php on line 29.
+ 1 APPPATH/Views/pages/product/index.php(29): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/product/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProductController.php(18): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 01:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 01:58:26 --> Undefined array key "is_best_seller"
+in APPPATH/Views/pages/product/index.php on line 30.
+ 1 APPPATH/Views/pages/product/index.php(30): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/product/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProductController.php(18): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 01:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 01:58:27 --> Undefined array key "is_best_seller"
+in APPPATH/Views/pages/product/index.php on line 30.
+ 1 APPPATH/Views/pages/product/index.php(30): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/product/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProductController.php(18): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 01:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 01:58:27 --> Undefined array key "is_best_seller"
+in APPPATH/Views/pages/product/index.php on line 30.
+ 1 APPPATH/Views/pages/product/index.php(30): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/product/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProductController.php(18): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 01:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 01:59:01 --> Undefined array key "is_available"
+in APPPATH/Views/pages/product/index.php on line 42.
+ 1 APPPATH/Views/pages/product/index.php(42): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/product/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProductController.php(18): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 01:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 01:59:02 --> Undefined array key "is_available"
+in APPPATH/Views/pages/product/index.php on line 42.
+ 1 APPPATH/Views/pages/product/index.php(42): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/product/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProductController.php(18): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 01:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 01:59:02 --> Undefined array key "is_available"
+in APPPATH/Views/pages/product/index.php on line 42.
+ 1 APPPATH/Views/pages/product/index.php(42): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/product/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProductController.php(18): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ProductController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 01:59:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 01:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:00:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:00:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:06:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:07:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:08:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:08:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:09:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-28 02:10:58 --> mysqli_sql_exception: Column 'product_unit_id' cannot be null in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query()
+#4 /home/dyvue/Documents/campus/tokori/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/dyvue/Documents/campus/tokori/system/BaseModel.php(782): CodeIgniter\Model->doInsert()
+#6 /home/dyvue/Documents/campus/tokori/system/Model.php(730): CodeIgniter\BaseModel->insert()
+#7 /home/dyvue/Documents/campus/tokori/app/Controllers/ProductController.php(53): CodeIgniter\Model->insert()
+#8 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(934): App\Controllers\ProductController->store()
+#9 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#10 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/dyvue/Documents/campus/tokori/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /home/dyvue/Documents/campus/tokori/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-11-28 02:10:58 --> Column 'product_unit_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Controllers/ProductController.php(53): CodeIgniter\Model->insert()
+ 9 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ProductController->store()
+10 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 02:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 02:13:14 --> Undefined variable $productUnits
+in APPPATH/Views/pages/product/create.php on line 37.
+ 1 APPPATH/Views/pages/product/create.php(37): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/product/create.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProductController.php(29): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ProductController->create()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 02:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 02:13:15 --> Undefined variable $productUnits
+in APPPATH/Views/pages/product/create.php on line 37.
+ 1 APPPATH/Views/pages/product/create.php(37): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/product/create.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProductController.php(29): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ProductController->create()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 02:13:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 02:13:16 --> Undefined variable $productUnits
+in APPPATH/Views/pages/product/create.php on line 37.
+ 1 APPPATH/Views/pages/product/create.php(37): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/product/create.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProductController.php(29): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ProductController->create()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 02:13:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-28 02:13:16 --> Undefined variable $productUnits
+in APPPATH/Views/pages/product/create.php on line 37.
+ 1 APPPATH/Views/pages/product/create.php(37): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/product/create.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ProductController.php(29): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ProductController->create()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-28 02:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:14:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:14:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-28 02:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

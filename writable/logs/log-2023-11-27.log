@@ -1,0 +1,120 @@
+INFO - 2023-11-27 23:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-27 23:44:24 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH/Helpers/global_helper.php on line 37.
+ 1 APPPATH/Helpers/global_helper.php(37): number_format(null, 0, ',', '.')
+ 2 APPPATH/Views/pages/home.php(30): rupiahFormatDashboard(null)
+ 3 SYSTEMPATH/View/View.php(213): include('/home/dyvue/Documents/campus/tokori/app/Views/pages/home.php')
+ 4 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('pages/home', [], true)
+ 6 APPPATH/Controllers/DashboardController.php(31): view('pages/home', [...])
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-27 23:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 23:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-27 23:48:56 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'tokori' in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /home/dyvue/Documents/campus/tokori/system/Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/dyvue/Documents/campus/tokori/system/BaseModel.php(557): CodeIgniter\Model->doFind()
+#6 /home/dyvue/Documents/campus/tokori/app/Filters/AuthUserManagerFilter.php(33): CodeIgniter\BaseModel->find()
+#7 /home/dyvue/Documents/campus/tokori/system/Filters/Filters.php(173): App\Filters\AuthUserManagerFilter->before()
+#8 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+#9 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/dyvue/Documents/campus/tokori/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /home/dyvue/Documents/campus/tokori/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'tokori' in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /home/dyvue/Documents/campus/tokori/system/Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/dyvue/Documents/campus/tokori/system/BaseModel.php(557): CodeIgniter\Model->doFind()
+#5 /home/dyvue/Documents/campus/tokori/app/Filters/AuthUserManagerFilter.php(33): CodeIgniter\BaseModel->find()
+#6 /home/dyvue/Documents/campus/tokori/system/Filters/Filters.php(173): App\Filters\AuthUserManagerFilter->before()
+#7 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+#8 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/dyvue/Documents/campus/tokori/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /home/dyvue/Documents/campus/tokori/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-11-27 23:48:56 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'tokori'
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(557): CodeIgniter\Model->doFind()
+ 5 APPPATH/Filters/AuthUserManagerFilter.php(33): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthUserManagerFilter->before()
+ 7 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
+INFO - 2023-11-27 23:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-27 23:48:58 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'tokori' in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /home/dyvue/Documents/campus/tokori/system/Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/dyvue/Documents/campus/tokori/system/BaseModel.php(557): CodeIgniter\Model->doFind()
+#6 /home/dyvue/Documents/campus/tokori/app/Filters/AuthUserManagerFilter.php(33): CodeIgniter\BaseModel->find()
+#7 /home/dyvue/Documents/campus/tokori/system/Filters/Filters.php(173): App\Filters\AuthUserManagerFilter->before()
+#8 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+#9 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/dyvue/Documents/campus/tokori/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /home/dyvue/Documents/campus/tokori/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'tokori' in /home/dyvue/Documents/campus/tokori/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/dyvue/Documents/campus/tokori/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/dyvue/Documents/campus/tokori/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /home/dyvue/Documents/campus/tokori/system/Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/dyvue/Documents/campus/tokori/system/BaseModel.php(557): CodeIgniter\Model->doFind()
+#5 /home/dyvue/Documents/campus/tokori/app/Filters/AuthUserManagerFilter.php(33): CodeIgniter\BaseModel->find()
+#6 /home/dyvue/Documents/campus/tokori/system/Filters/Filters.php(173): App\Filters\AuthUserManagerFilter->before()
+#7 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+#8 /home/dyvue/Documents/campus/tokori/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/dyvue/Documents/campus/tokori/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /home/dyvue/Documents/campus/tokori/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-11-27 23:48:58 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'tokori'
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(557): CodeIgniter\Model->doFind()
+ 5 APPPATH/Filters/AuthUserManagerFilter.php(33): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthUserManagerFilter->before()
+ 7 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/dyvue/Documents/campus/tokori/public/index.php')
