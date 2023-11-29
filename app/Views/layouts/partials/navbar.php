@@ -14,7 +14,7 @@ $firstName = explode(" ", $profile['name'])[0];
   <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
     <div class="navbar-nav align-items-center">
       <a target="_blank" href="<?= site_url('order') ?>" class="btn rounded-pill btn-primary">
-        <span class="tf-icons bx bx-cart"></span> Order Pelanggan
+        <span class="tf-icons bx bx-cart-alt"></span> Point of Sale
       </a>
     </div>
     <ul class="navbar-nav flex-row align-items-center ms-auto">
