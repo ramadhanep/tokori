@@ -74,7 +74,7 @@ $('.modal-basic-edit').click(function(e) {
 $('.data-table').DataTable({
     ordering: false,
     lengthChange: false,
-    pageLength: 5
+    pageLength: 10
 })
 </script>
 <?= $this->endSection() ?>
