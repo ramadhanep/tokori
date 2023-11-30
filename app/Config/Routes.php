@@ -30,15 +30,19 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
+// auth
 $routes->get('login', 'AuthController::index', ['filter' => 'guestfilter']);
 $routes->post('login', 'AuthController::login', ['filter' => 'guestfilter']);
 $routes->get('logout', 'AuthController::logout', ['filter' => 'authuserfilter']);
-
+// dashboard
 $routes->get('/', 'DashboardController::index', ['filter' => 'authuserfilter']);
+// profile
 $routes->get('/profile', 'ProfileController::index', ['filter' => 'authuserfilter']);
-$routes->post('/profile', 'ProfileController::save', ['filter' => 'authuserfilter']);
+$routes->post('/profile', 'Profileapp/Controllers/ProfileController.phpController::save', ['filter' => 'authuserfilter']);
 $routes->post('/profile/change-password', 'ProfileController::changePassword', ['filter' => 'authuserfilter']);
-
+// settings
+$routes->get('/settings', 'SettingController::index', ['filter' => 'authuserfilter']);
+$routes->post('/settings', 'SettingController::save', ['filter' => 'authuserfilter']);
 // user
 $routes->get('users', 'UserController::index', ['filter' => 'authusermanajerfilter']);
 $routes->get('users/create', 'UserController::create', ['filter' => 'authusermanajerfilter']);

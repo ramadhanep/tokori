@@ -99,28 +99,28 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
     <?php endif; ?>
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Laporan</span></li>
     <li class="menu-item <?= is_active_menu('reports/pos'); ?> <?= is_active_menu('reports/stock-adjustments'); ?> <?= is_active_menu('reports/purchases'); ?>">
-        <a href="javascript:void(0)" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons bx bx-chart"></i>
-          <div data-i18n="Extended UI">Laporan</div>
-        </a>
-        <ul class="menu-sub">
-          <li class="menu-item <?= is_active_menu('reports/pos'); ?>">
-            <a href="<?= site_url('reports/pos'); ?>" class="menu-link">
-              <div data-i18n="Perfect Scrollbar">Point of Sale</div>
-            </a>
-          </li>
-          <li class="menu-item <?= is_active_menu('reports/stock-adjustments'); ?>">
-            <a href="<?= site_url('reports/stock-adjustments'); ?>" class="menu-link">
-              <div data-i18n="Text Divider">Stock Adjustment</div>
-            </a>
-          </li>
-          <li class="menu-item <?= is_active_menu('reports/purchases'); ?>">
-            <a href="<?= site_url('reports/purchases'); ?>" class="menu-link">
-              <div data-i18n="Text Divider">Pembelian</div>
-            </a>
-          </li>
-        </ul>
-      </li>
+      <a href="javascript:void(0)" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-chart"></i>
+        <div data-i18n="Extended UI">Laporan</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item <?= is_active_menu('reports/pos'); ?>">
+          <a href="<?= site_url('reports/pos'); ?>" class="menu-link">
+            <div data-i18n="Perfect Scrollbar">Point of Sale</div>
+          </a>
+        </li>
+        <li class="menu-item <?= is_active_menu('reports/stock-adjustments'); ?>">
+          <a href="<?= site_url('reports/stock-adjustments'); ?>" class="menu-link">
+            <div data-i18n="Text Divider">Stock Adjustment</div>
+          </a>
+        </li>
+        <li class="menu-item <?= is_active_menu('reports/purchases'); ?>">
+          <a href="<?= site_url('reports/purchases'); ?>" class="menu-link">
+            <div data-i18n="Text Divider">Pembelian</div>
+          </a>
+        </li>
+      </ul>
+    </li>
     <?php if ($profile['role'] == 'Manajer') : ?>
       <li class="menu-header small text-uppercase"><span class="menu-header-text">Akun</span></li>
       <li class="menu-item <?= is_active_menu('users'); ?>">
@@ -130,5 +130,13 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
         </a>
       </li>
     <?php endif; ?>
+    <li class="menu-header small text-uppercase"><span class="menu-header-text">Pengaturan</span></li>
+    <li class="menu-item <?= is_active_menu('settings'); ?>">
+      <a href="<?= site_url('settings'); ?>" class="menu-link">
+        <i class="menu-icon tf-icons bx bxs-cog"></i>
+        <div data-i18n="Boxicons">Pengaturan</div>
+      </a>
+    </li>
+    <br><br>
   </ul>
 </aside>
