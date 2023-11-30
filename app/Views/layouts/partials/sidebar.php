@@ -61,7 +61,7 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
     </li>
     <?php if ($profile['role'] == 'Manajer') : ?>
       <li class="menu-header small text-uppercase"><span class="menu-header-text">Manajemen</span></li>
-      <li class="menu-item <?= is_active_menu('master/products'); ?> <?= is_active_menu('master/product-categories'); ?>">
+      <li class="menu-item <?= is_active_menu('master/products'); ?> <?= is_active_menu('master/product-categories'); ?> <?= is_active_menu('master/product-units'); ?>">
         <a href="javascript:void(0)" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-book"></i>
           <div data-i18n="Extended UI">Produk</div>
