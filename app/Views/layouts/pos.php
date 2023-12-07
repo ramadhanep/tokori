@@ -27,7 +27,7 @@
       <!-- Layout container -->
       <div class="layout-page">
         <!-- Navbar -->
-        <?php include 'partials/navbar-customer.php'; ?>
+        <?php include 'partials/navbar-pos.php'; ?>
         <!-- / Navbar -->
 
         <!-- Content wrapper -->

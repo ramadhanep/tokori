@@ -38,7 +38,7 @@ $routes->get('logout', 'AuthController::logout', ['filter' => 'authuserfilter'])
 $routes->get('/', 'DashboardController::index', ['filter' => 'authuserfilter']);
 // profile
 $routes->get('/profile', 'ProfileController::index', ['filter' => 'authuserfilter']);
-$routes->post('/profile', 'Profileapp/Controllers/ProfileController.phpController::save', ['filter' => 'authuserfilter']);
+$routes->post('/profile', 'ProfileController::save', ['filter' => 'authuserfilter']);
 $routes->post('/profile/change-password', 'ProfileController::changePassword', ['filter' => 'authuserfilter']);
 // settings
 $routes->get('/settings', 'SettingController::index', ['filter' => 'authuserfilter']);
@@ -78,7 +78,8 @@ $routes->get('master/suppliers', 'SupplierController::index', ['filter' => 'auth
 $routes->post('master/suppliers', 'SupplierController::store', ['filter' => 'authusermanajerfilter']);
 $routes->post('master/suppliers/update/(:segment)', 'SupplierController::update/$1', ['filter' => 'authusermanajerfilter']);
 $routes->get('master/suppliers/delete/(:segment)', 'SupplierController::delete/$1', ['filter' => 'authusermanajerfilter']);
-
+// pos
+$routes->get('/pos', 'POSController::index', ['filter' => 'authuserfilter']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

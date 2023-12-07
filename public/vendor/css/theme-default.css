@@ -181,7 +181,7 @@ a.bg-primary:focus {
   background-color: #D80032;
 }
 .bg-label-primary {
-  background-color: #e7e7ff !important;
+  background-color: #f5bfbf !important;
   color: #D80032 !important;
 }
 .border-label-primary {
@@ -250,7 +250,7 @@ button.list-group-item-primary.active {
   background-color: #D80032;
 }
 .alert-primary {
-  background-color: #e7e7ff;
+  background-color: #f5bfbf;
   border-color: #d2d3ff;
   color: #D80032;
 }
@@ -520,7 +520,7 @@ button.list-group-item-primary.active {
 .btn-label-primary {
   color: #D80032;
   border-color: rgba(0, 0, 0, 0);
-  background: #e7e7ff;
+  background: #f5bfbf;
 }
 .btn-label-primary:hover {
   border-color: rgba(0, 0, 0, 0) !important;
@@ -553,7 +553,7 @@ button.list-group-item-primary.active {
 .btn-label-primary.disabled,
 .btn-label-primary:disabled {
   color: #D80032 !important;
-  background-color: #e7e7ff !important;
+  background-color: #f5bfbf !important;
   border-color: rgba(0, 0, 0, 0) !important;
 }
 .btn-outline-primary {
@@ -970,7 +970,7 @@ a {
   color: #D80032;
 }
 a:hover {
-  color: #787bff;
+  color: #c40430;
 }
 .fill-primary {
   fill: #D80032;
@@ -1023,7 +1023,7 @@ table.dataTable.dtr-column > tbody > tr > th.control:before {
 .datepicker table tr td.range.highlighted,
 .datepicker table tr td.range.today {
   color: #D80032 !important;
-  background: #e7e7ff !important;
+  background: #f5bfbf !important;
 }
 .datepicker table tr td.range.focused,
 .datepicker table tr td.range.highlighted.focused,
@@ -1055,8 +1055,8 @@ table.dataTable.dtr-column > tbody > tr > th.control:before {
 .flatpickr-day.prevMonthDay.today.inRange,
 .flatpickr-day.nextMonthDay.today.inRange {
   color: #D80032 !important;
-  background: #e7e7ff !important;
-  border-color: #e7e7ff !important;
+  background: #f5bfbf !important;
+  border-color: #f5bfbf !important;
 }
 .flatpickr-day.selected,
 .flatpickr-day.selected.inRange,
@@ -1106,7 +1106,7 @@ table.dataTable.dtr-column > tbody > tr > th.control:before {
 }
 .daterangepicker td.in-range:not(.start-date):not(.end-date):not(.off) {
   color: #D80032 !important;
-  background-color: #e7e7ff !important;
+  background-color: #f5bfbf !important;
 }
 .ranges li.active {
   color: #fff !important;
@@ -1259,7 +1259,7 @@ li.ui-timepicker-selected,
   background: #D80032 !important;
 }
 .fc .fc-event-primary:not(.fc-list-event) {
-  background-color: #e7e7ff !important;
+  background-color: #f5bfbf !important;
   color: #D80032 !important;
 }
 .fc .fc-event-primary:not(.fc-list-event) {
@@ -1745,7 +1745,7 @@ html:not(.layout-menu-collapsed)
   > .menu-item.active
   > .menu-link:not(.menu-toggle):before {
   background-color: #D80032 !important;
-  border: 3px solid #e7e7ff !important;
+  border: 3px solid #f5bfbf !important;
 }
 .app-brand .layout-menu-toggle {
   background-color: #D80032;
