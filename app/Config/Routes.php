@@ -80,6 +80,9 @@ $routes->post('master/suppliers/update/(:segment)', 'SupplierController::update/
 $routes->get('master/suppliers/delete/(:segment)', 'SupplierController::delete/$1', ['filter' => 'authusermanajerfilter']);
 // pos
 $routes->get('/pos', 'POSController::index', ['filter' => 'authuserfilter']);
+// pos ajax
+$routes->get('/pos/ajax/products', 'POSController::ajaxProductsList', ['filter' => 'authuserfilter']);
+$routes->post('/pos/ajax/transaction', 'POSController::ajaxTransaction', ['filter' => 'authuserfilter']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing
