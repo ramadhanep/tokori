@@ -166,7 +166,7 @@
 
 	// Load and display the list of products
 	async function loadProductList() {
-		let apiEndpoint = '/pos/ajax/products';
+		let apiEndpoint = '/app/pos/ajax/products';
 		let productCodes = productList.map(product => product.code);
 
 		await $.ajax({
@@ -198,7 +198,7 @@
 								<div class="row">
 									<div class="col-md-8">
 									<h6 class="me-3">${product.name}</h6>
-									<span class="me-1"><span class="badge bg-label-primary">${product.code}</span>
+									<small><span class="me-1"><span class="badge bg-label-primary">${product.product_category_name}</span></small>
 										<div class="mt-3 w-100p border rounded">
 										<div class="d-flex justify-content-start align-items-center gap-1">
 											<button type="button" class="btn-none text-primary p-1 btn-minus" data-product-code="${product.code}"><i class="bx bx-sm bx-minus"></i></button>
@@ -358,15 +358,29 @@
 		if (existingProduct) {
 			// If the product already exists, increment the quantity
 			existingProduct.quantity += 1;
+			loadProductList();
 		} else {
 			// If the product does not exist, add it with quantity 1
-			let newProduct = {
-				code: scannedBarcode,
-				quantity: 1
-			};
-			productList.push(newProduct);
+			let apiEndpoint = '/app/pos/ajax/product-check';
+			$.ajax({
+				url: apiEndpoint,
+				method: 'GET',
+				dataType: 'json',
+				data: {
+					'product-code': scannedBarcode
+				},
+				success: function(data) {
+					if (data.status) {
+						let newProduct = {
+							code: scannedBarcode,
+							quantity: 1
+						};
+						productList.push(newProduct);
+						loadProductList();
+					}
+				}
+			});
 		}
-		loadProductList();
 	}
 
 	// Submit button action
@@ -380,7 +394,7 @@
 		event.preventDefault()
 		buttonSubmitLoader.show()
 		buttonSubmitText.text('')
-		let apiEndpoint = '/pos/ajax/transaction';
+		let apiEndpoint = '/app/pos/ajax/transaction';
 		$.ajax({
 			url: apiEndpoint,
 			method: 'POST',
@@ -410,7 +424,7 @@
 					allowOutsideClick: false,
 				}).then((result) => {
 					if (result.isConfirmed) {
-						window.location.href = `/pos/${data.sale}`;
+						window.location.href = `/app/pos/${data.sale}`;
 					}
 				});
 			},

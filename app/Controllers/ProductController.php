@@ -16,7 +16,7 @@ class ProductController extends BaseController
         $products = $model->orderBy('created_at', 'DESC')->findAll();
         foreach ($products as $key => $item) {
             $generator = new BarcodeGeneratorPNG;
-            $products[$key]['barcode'] = 'data:image/png;base64,' . base64_encode($generator->getBarcode('081231723897', $generator::TYPE_CODE_128)) . '';
+            $products[$key]['barcode'] = 'data:image/png;base64,' . base64_encode($generator->getBarcode($item['code'], $generator::TYPE_CODE_128)) . '';
         }
         $generator = new BarcodeGeneratorPNG();
         $pass = [

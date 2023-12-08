@@ -4,7 +4,6 @@ namespace App\Controllers;
 
 use App\Models\PaymentMethod;
 use App\Models\Product;
-use App\Models\Sale;
 use App\Models\SaleProduct;
 use App\Models\Setting;
 use Config\Database;
@@ -26,16 +25,31 @@ class POSController extends BaseController
         return view("pages/pos/index", $pass);
     }
 
+    public function ajaxProductCheck()
+    {
+        $productCode = $this->request->getGet('product-code');
+        $productModel = new Product();
+        $product = $productModel->where('code', $productCode)->first();
+        $status = false;
+        if ($product) {
+            $status = true;
+        }
+
+        $this->response->setHeader('Content-Type', 'application/json');
+        return $this->response->setJSON(array('status' => $status));
+    }
+
     public function ajaxProductsList()
     {
         $productCodes = $this->request->getGet('product-codes');
         $products = array();
         if (is_array($productCodes) && count($productCodes) > 0) {
             $productModel = new Product();
-            if (!empty($productCodes)) {
-                $productModel->whereIn('code', $productCodes);
-            }
+            $productModel->whereIn('code', $productCodes);
             $products = $productModel->orderBy('name', 'ASC')->findAll();
+            foreach ($products as $key => $item) {
+                $products[$key]['product_category_name'] = $productModel->getCategory($item['product_category_id']);
+            }
         }
 
         $this->response->setHeader('Content-Type', 'application/json');

@@ -40,23 +40,16 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
       </a>
     </li>
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Aplikasi</span></li>
-    <li class="menu-item <?= is_active_menu('pos'); ?>">
-      <a href="<?= site_url('pos'); ?>" class="menu-link">
+    <li class="menu-item <?= is_active_menu('point-of-sales'); ?>">
+      <a href="<?= site_url('point-of-sales'); ?>" class="menu-link">
         <i class="menu-icon tf-icons bx bx-cart-alt"></i>
         <div data-i18n="Without menu">Point of Sale</div>
       </a>
     </li>
-    <li class="menu-header small text-uppercase"><span class="menu-header-text">Transaksi</span></li>
     <li class="menu-item <?= is_active_menu('stock-adjustments'); ?>">
       <a href="<?= site_url('stock-adjustments'); ?>" class="menu-link">
         <i class="menu-icon tf-icons bx bxs-package"></i>
         <div data-i18n="Without menu">Stock Adjustment</div>
-      </a>
-    </li>
-    <li class="menu-item <?= is_active_menu('purchases'); ?>">
-      <a href="<?= site_url('purchases'); ?>" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-layer-plus"></i>
-        <div data-i18n="Without menu">Pembelian</div>
       </a>
     </li>
     <?php if ($profile['role'] == 'Manajer') : ?>
@@ -98,25 +91,20 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
       </li>
     <?php endif; ?>
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Laporan</span></li>
-    <li class="menu-item <?= is_active_menu('reports/pos'); ?> <?= is_active_menu('reports/stock-adjustments'); ?> <?= is_active_menu('reports/purchases'); ?>">
+    <li class="menu-item <?= is_active_menu('reports/point-of-sales'); ?> <?= is_active_menu('reports/stock-adjustments'); ?> <?= is_active_menu('reports/purchases'); ?>">
       <a href="javascript:void(0)" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-chart"></i>
         <div data-i18n="Extended UI">Laporan</div>
       </a>
       <ul class="menu-sub">
-        <li class="menu-item <?= is_active_menu('reports/pos'); ?>">
-          <a href="<?= site_url('reports/pos'); ?>" class="menu-link">
+        <li class="menu-item <?= is_active_menu('reports/point-of-sales'); ?>">
+          <a href="<?= site_url('reports/point-of-sales'); ?>" class="menu-link">
             <div data-i18n="Perfect Scrollbar">Point of Sale</div>
           </a>
         </li>
         <li class="menu-item <?= is_active_menu('reports/stock-adjustments'); ?>">
           <a href="<?= site_url('reports/stock-adjustments'); ?>" class="menu-link">
             <div data-i18n="Text Divider">Stock Adjustment</div>
-          </a>
-        </li>
-        <li class="menu-item <?= is_active_menu('reports/purchases'); ?>">
-          <a href="<?= site_url('reports/purchases'); ?>" class="menu-link">
-            <div data-i18n="Text Divider">Pembelian</div>
           </a>
         </li>
       </ul>
