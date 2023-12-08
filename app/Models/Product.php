@@ -9,7 +9,7 @@ class Product extends Model
 {
     protected $table = 'products';
     protected $beforeInsert = ['generateID'];
-    protected $allowedFields = ['product_category_id', 'product_unit_id', 'code', 'name', 'photo', 'price', 'quantity', 'alert_quantity', 'created_at', 'updated_at'];
+    protected $allowedFields = ['product_category_id', 'product_unit_id', 'code', 'name', 'photo', 'price', 'quantity', 'created_at', 'updated_at'];
     protected $useTimestamps = true;
     protected $useSoftDeletes = true;
     protected $deletedField = 'deleted_at';

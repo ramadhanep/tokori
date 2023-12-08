@@ -192,7 +192,7 @@
 							<li class="list-group-item p-4">
 							<div class="d-flex gap-3">
 								<div class="flex-shrink-0 d-flex align-items-start">
-								<img src="/img/products/${product.photo ? product.photo : 'default.jpg'}" alt="${product.name}" class="w-px-100 d-block rounded object-fit-cover border">
+								<img src="/img/products/${product.photo ? product.photo : 'default.jpg'}" alt="${product.name}" class="w-px-100 d-block rounded object-fit-cover" height="100" width="100">
 								</div>
 								<div class="flex-grow-1">
 								<div class="row">

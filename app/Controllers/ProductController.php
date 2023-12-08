@@ -27,6 +27,23 @@ class ProductController extends BaseController
         return view('pages/product/index', $pass);
     }
 
+    public function print()
+    {
+        $model = new Product();
+        $products = $model->orderBy('created_at', 'DESC')->findAll();
+        foreach ($products as $key => $item) {
+            $generator = new BarcodeGeneratorPNG;
+            $products[$key]['barcode'] = 'data:image/png;base64,' . base64_encode($generator->getBarcode($item['code'], $generator::TYPE_CODE_128)) . '';
+        }
+        $generator = new BarcodeGeneratorPNG();
+        $pass = [
+            'model' => $model,
+            'products' => $products,
+        ];
+
+        return view('pages/product/print', $pass);
+    }
+
     public function create()
     {
         $modelCategory = new ProductCategory();
@@ -49,7 +66,6 @@ class ProductController extends BaseController
             'name' => $this->request->getPost('form-name'),
             'price' => (int) str_replace(['Rp', '.', ','], '', $this->request->getPost('form-price')),
             'quantity' => $this->request->getPost('form-quantity'),
-            'alert_quantity' => $this->request->getPost('form-alert-quantity'),
         ];
 
         $photo = $this->request->getFile('form-photo');
@@ -90,7 +106,6 @@ class ProductController extends BaseController
             'name' => $this->request->getPost('form-name'),
             'price' => (int) str_replace(['Rp', '.', ','], '', $this->request->getPost('form-price')),
             'quantity' => $this->request->getPost('form-quantity'),
-            'alert_quantity' => $this->request->getPost('form-alert-quantity'),
         ];
 
         $photo = $this->request->getFile('form-photo');

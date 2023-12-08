@@ -18,7 +18,6 @@ class ProductSeeder extends Seeder
                 'photo'                 => null,
                 'price'                 => 15000,
                 'quantity'              => 150,
-                'alert_quantity'        => 10,
                 'created_at'            => date('Y-m-d H:i:s'),
                 'updated_at'            => date('Y-m-d H:i:s'),
             ],

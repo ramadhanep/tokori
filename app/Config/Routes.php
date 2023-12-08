@@ -63,6 +63,7 @@ $routes->post('master/product-units/update/(:segment)', 'ProductUnitController::
 $routes->get('master/product-units/delete/(:segment)', 'ProductUnitController::delete/$1', ['filter' => 'authusermanajerfilter']);
 // product
 $routes->get('master/products', 'ProductController::index', ['filter' => 'authusermanajerfilter']);
+$routes->get('master/products/print', 'ProductController::print', ['filter' => 'authusermanajerfilter']);
 $routes->get('master/products/create', 'ProductController::create', ['filter' => 'authusermanajerfilter']);
 $routes->post('master/products/create', 'ProductController::store', ['filter' => 'authusermanajerfilter']);
 $routes->get('master/products/edit/(:segment)', 'ProductController::edit/$1', ['filter' => 'authusermanajerfilter']);

@@ -56,10 +56,6 @@
 								<label for="form-quantity" class="form-label">Stok <i class="text-danger">*</i></label>
 								<input class="form-control" type="number" id="form-quantity" name="form-quantity" value="<?= $data['quantity'] ?>" required autofocus />
 							</div>
-							<div class="mb-3 col-md-3">
-								<label for="form-alert-quantity" class="form-label">Stok Alert<i class="text-danger">*</i></label>
-								<input class="form-control" type="number" id="form-alert-quantity" name="form-alert-quantity" value="<?= $data['alert_quantity'] ?>" required autofocus />
-							</div>
 						</div>
 						<div class="mt-2">
 							<button type="submit" class="btn btn-primary me-2">Submit</button>

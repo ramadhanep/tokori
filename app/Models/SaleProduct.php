@@ -46,7 +46,6 @@ class SaleProduct extends Model
             "photo" => "",
             "price" => 0,
             "quantity" => 0,
-            "alert_quantity" => 0,
         );
     }
 

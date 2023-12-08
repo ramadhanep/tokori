@@ -17,7 +17,6 @@ class Products extends Migration
             'photo'                 => ['type' => 'VARCHAR', 'constraint' => 255, 'null' => true],
             'price'                 => ['type' => 'DECIMAL', 'constraint' => '10,2'],
             'quantity'              => ['type' => 'INT', 'constraint' => 10, 'default' => 0],
-            'alert_quantity'        => ['type' => 'INT', 'constraint' => 10, 'default' => 0],
             'created_at'            => ['type' => 'TIMESTAMP', 'null' => true],
             'updated_at'            => ['type' => 'TIMESTAMP', 'null' => true],
             'deleted_at'            => ['type' => 'TIMESTAMP', 'null' => true],
