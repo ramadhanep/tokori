@@ -4,7 +4,7 @@
 
 <?= $this->section("content") ?>
 <div class="container-xxl flex-grow-1 container-p-y">
-	<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Home /</span> POS</h4>
+	<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Aplikasi /</span> POS</h4>
 	<div class="card">
 		<div class="card-body">
 			<div class="row">
@@ -56,8 +56,8 @@
 						</dl>
 						<dl class="mt-2 row mb-0">
 							<dt class="col-12 fw-normal">Metode Pembayaran <i class="text-danger">*</i></dt>
-							<dd class="mt-1 col-12 fw-semibold text-end mb-0">
-								<select class="form-select select2" id="form-payment-method" name="form-payment-method" required>
+							<dd class="mt-1 col-12 fw-semibold text-left mb-0">
+								<select class="form-select" id="form-payment-method" name="form-payment-method" required>
 									<?php foreach ($paymentMethods as $item) : ?>
 										<option value="<?= $item['id'] ?>"><?= $item['name'] ?></option>
 									<?php endforeach; ?>
@@ -106,7 +106,7 @@
 	}
 
 	.selectra-options {
-		background-color: #f1f1f1;
+		background-color: #ebeef0;
 		overflow: hidden
 	}
 
@@ -126,6 +126,14 @@
 	let totalAmount = 0;
 	let payAmount = 0;
 	let payBackAmount = 0;
+
+	// Selectra untuk metode pembayaran
+	const selectCustomSearch = new Selectra('#form-payment-method', {
+		search: true,
+		langInputPlaceholder: 'Cari metode pembayaran',
+		langEmptyValuePlaceholder: 'Metode pembayaran tidak ditemukan'
+	})
+	selectCustomSearch.init()
 
 	// Open modal add product
 	const modalProductAdd = () => {

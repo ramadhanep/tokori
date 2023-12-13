@@ -25,6 +25,17 @@ class POSController extends BaseController
         return view("pages/pos/index", $pass);
     }
 
+    public function show()
+    {
+        $setting = new Setting();
+
+        $pass = [
+            'ppn' => $setting->orderBy('id', 'ASC')->first()['sales_tax']
+        ];
+
+        return view("pages/pos/show", $pass);
+    }
+
     public function ajaxProductCheck()
     {
         $productCode = $this->request->getGet('product-code');

@@ -15650,7 +15650,7 @@ html:not(.layout-footer-fixed) .content-wrapper {
 
 .app-brand-link {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .app-brand-logo {
