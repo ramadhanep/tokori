@@ -68,4 +68,24 @@ class SaleProduct extends Model
             "name" => "",
         );
     }
+
+    public function getProductUnit($productId)
+    {
+        $db = Database::connect();
+        $productModel = $db->table('products')->where('id', $productId)->get();
+        $data = $productModel->getRowArray();
+
+        if ($data) {
+            $productCategoryModel = $db->table('product_units')->where('id', $data['product_unit_id'])->get();
+            $db->close();
+            $dataCat = $productCategoryModel->getRowArray();
+
+            return $dataCat;
+        }
+
+        return array(
+            "id" => "",
+            "name" => "",
+        );
+    }
 }

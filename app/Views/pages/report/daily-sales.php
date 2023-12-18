@@ -101,7 +101,7 @@ endif;
     $('#filter-end-date').val(formattedEndDate);
 
     // Datatable
-    var reportTitle = `Laporan Harian (${formattedStartDate} - ${formattedEndDate})`;
+    var reportTitle = `Penjualan Harian (${formattedStartDate} - ${formattedEndDate})`;
     $('.data-table').DataTable({
         ordering: false,
         lengthChange: true,

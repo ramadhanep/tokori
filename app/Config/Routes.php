@@ -79,6 +79,7 @@ $routes->get('/point-of-sales', 'POSManageController::index', ['filter' => 'auth
 $routes->get('/point-of-sales/(:segment)', 'POSManageController::show/$1', ['filter' => 'authuserfilter']);
 // report pos
 $routes->get('/reports/daily-sales', 'ReportController::dailySales', ['filter' => 'authuserfilter']);
+$routes->get('/reports/best-selling-product', 'ReportController::bestSellingProduct', ['filter' => 'authuserfilter']);
 
 
 // pos

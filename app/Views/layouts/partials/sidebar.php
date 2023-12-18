@@ -79,7 +79,7 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
       </li>
     <?php endif; ?>
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Laporan</span></li>
-    <li class="menu-item <?= is_active_menu('reports/point-of-sale'); ?>">
+    <li class="menu-item <?= is_active_menu('reports/daily-sale'); ?> <?= is_active_menu('reports/best-seller-product'); ?>">
       <a href="javascript:void(0)" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-chart"></i>
         <div data-i18n="Extended UI">Laporan</div>
@@ -88,6 +88,11 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
         <li class="menu-item <?= is_active_menu('reports/daily-sale'); ?>">
           <a href="<?= site_url('reports/daily-sales'); ?>" class="menu-link">
             <div data-i18n="Perfect Scrollbar">Penjualan Harian</div>
+          </a>
+        </li>
+        <li class="menu-item <?= is_active_menu('reports/best-selling-product'); ?>">
+          <a href="<?= site_url('reports/best-selling-product'); ?>" class="menu-link">
+            <div data-i18n="Perfect Scrollbar">Produk Terlaris</div>
           </a>
         </li>
       </ul>

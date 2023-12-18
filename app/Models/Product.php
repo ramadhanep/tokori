@@ -41,4 +41,18 @@ class Product extends Model
 
         return null;
     }
+
+    public function getUnit($productUnitId)
+    {
+        $db = Database::connect();
+        $productModel = $db->table('product_units')->where('id', $productUnitId)->get();
+        $db->close();
+        $category = $productModel->getRowArray();
+
+        if ($category) {
+            return $category['name'];
+        }
+
+        return null;
+    }
 }

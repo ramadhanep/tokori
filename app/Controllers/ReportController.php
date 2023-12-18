@@ -2,7 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Models\Product;
 use App\Models\Sale;
+use App\Models\SaleProduct;
 use CodeIgniter\I18n\Time;
 
 class ReportController extends BaseController
@@ -47,5 +49,22 @@ class ReportController extends BaseController
         ];
 
         return view('pages/report/daily-sales', $data);
+    }
+
+    public function bestSellingProduct()
+    {
+        $saleProductModel = new SaleProduct();
+        $bestSellingProducts = $saleProductModel
+            ->select('product_id, SUM(quantity) as quantity')
+            ->groupBy('product_id')
+            ->orderBy('quantity', 'DESC')
+            ->findAll();
+
+        $data = [
+            'saleProductModel' => $saleProductModel,
+            'reports' => $bestSellingProducts,
+        ];
+
+        return view('pages/report/best-selling-product', $data);
     }
 }
