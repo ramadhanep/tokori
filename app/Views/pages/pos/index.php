@@ -415,7 +415,6 @@
 				'total_amount': totalAmount,
 				'pay_amount': payAmount,
 				'payback_amount': payBackAmount,
-				'status': "Selesai",
 				'product_lists': productList,
 			},
 			success: function(data) {

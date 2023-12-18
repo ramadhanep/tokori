@@ -114,7 +114,6 @@ class POSController extends BaseController
             'total_amount' => $this->request->getPost('total_amount'),
             'pay_amount' => $this->request->getPost('pay_amount'),
             'payback_amount' => $this->request->getPost('payback_amount'),
-            'status' => $this->request->getPost('status'),
             'created_at' => $currentDateTime,
             'updated_at' => $currentDateTime
         ];

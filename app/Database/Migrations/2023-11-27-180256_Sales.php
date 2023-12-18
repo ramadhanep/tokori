@@ -17,7 +17,6 @@ class Sales extends Migration
             'total_amount'      => ['type' => 'DECIMAL', 'constraint' => '10,2'],
             'pay_amount'        => ['type' => 'DECIMAL', 'constraint' => '10,2'],
             'payback_amount'    => ['type' => 'DECIMAL', 'constraint' => '10,2'],
-            'status'            => ['type' => 'ENUM', 'constraint' => ['Draft', 'Selesai'], 'default' => 'Selesai'],
             'created_at'        => ['type' => 'TIMESTAMP', 'null' => true],
             'updated_at'        => ['type' => 'TIMESTAMP', 'null' => true],
             'deleted_at'        => ['type' => 'TIMESTAMP', 'null' => true],

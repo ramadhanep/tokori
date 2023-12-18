@@ -9,7 +9,7 @@ class Sale extends Model
 {
     protected $table = 'sales';
     protected $beforeInsert = ['generateID'];
-    protected $allowedFields = ['payment_method_id', 'customer_name', 'total_sale_amount', 'tax_amount', 'total_amount', 'pay_amount', 'payback_amount', 'status', 'created_at', 'updated_at'];
+    protected $allowedFields = ['payment_method_id', 'customer_name', 'total_sale_amount', 'tax_amount', 'total_amount', 'pay_amount', 'payback_amount', 'created_at', 'updated_at'];
     protected $useTimestamps = true;
     protected $useSoftDeletes = true;
     protected $deletedField = 'deleted_at';
