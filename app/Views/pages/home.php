@@ -14,7 +14,7 @@
             </div>
           </div>
           <span class="fw-semibold d-block mt-3 mb-2">Total Transaksi Bulan ini</span>
-          <h3 class="card-title mb-3"><?= 0 ?></h3>
+          <h3 class="card-title mb-3"><?= $saleTotal ?></h3>
         </div>
       </div>
     </div>
@@ -27,7 +27,7 @@
             </div>
           </div>
           <span class="fw-semibold d-block mt-3 mb-2">Pendapatan Bulan ini</span>
-          <h3 class="card-title mb-3"><?= rupiahFormatDashboard(100000) ?></h3>
+          <h3 class="card-title mb-3"><?= rupiahFormatDashboard($salesByCurrentMonth) ?></h3>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@
             </div>
           </div>
           <span class="fw-semibold d-block mt-3 mb-2">Total Produk</span>
-          <h3 class="card-title mb-3"><?= rupiahFormatDashboard(100000) ?></h3>
+          <h3 class="card-title mb-3"><?= $productTotal ?></h3>
         </div>
       </div>
     </div>
@@ -101,9 +101,8 @@
     },
     series: [
       {
-        data: [
-          3350000, 3350000, 4800000, 4800000, 2950000, 2950000, 1800000, 1800000, 3750000, 3750000, 5700000, 5700000,
-        ],
+        data: <?= json_encode($salesPerMonthArray) ?>,
+        name: "Pendapatan"
       },
     ],
     dataLabels: { enabled: false },
@@ -152,8 +151,6 @@
         },
         style: { fontSize: "13px", colors: textMuted },
       },
-      min: 1e6,
-      max: 6e6,
       tickAmount: 5,
     },
   };
