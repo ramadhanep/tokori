@@ -2,8 +2,11 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Exceptions\PageNotFoundException;
+
 use App\Models\PaymentMethod;
 use App\Models\Product;
+use App\Models\Sale;
 use App\Models\SaleProduct;
 use App\Models\Setting;
 use Config\Database;
@@ -25,15 +28,44 @@ class POSController extends BaseController
         return view("pages/pos/index", $pass);
     }
 
-    public function show()
+    public function show($id)
     {
-        $setting = new Setting();
+        $sale = new Sale();
+        $salefind = $sale->find($id);
+        
+        if ($salefind) {
+            $saleProduct = new SaleProduct();
+            $pass = [
+                'model' => $sale,
+                'modelSaleProduct' => $saleProduct,
+                'sale' => $salefind,
+            ];
+    
+            return view("pages/pos/show", $pass);
+        }
 
-        $pass = [
-            'ppn' => $setting->orderBy('id', 'ASC')->first()['sales_tax']
-        ];
+        $message = 'Data transaksi tidak dapat ditemukan.';
+        throw new PageNotFoundException($message);
+    }
 
-        return view("pages/pos/show", $pass);
+    public function print($id)
+    {
+        $sale = new Sale();
+        $salefind = $sale->find($id);
+        
+        if ($salefind) {
+            $saleProduct = new SaleProduct();
+            $pass = [
+                'model' => $sale,
+                'modelSaleProduct' => $saleProduct,
+                'sale' => $salefind,
+            ];
+    
+            return view("pages/pos/print", $pass);
+        }
+
+        $message = 'Data transaksi tidak dapat ditemukan.';
+        throw new PageNotFoundException($message);
     }
 
     public function ajaxProductCheck()

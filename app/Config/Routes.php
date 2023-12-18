@@ -81,7 +81,8 @@ $routes->post('master/suppliers/update/(:segment)', 'SupplierController::update/
 $routes->get('master/suppliers/delete/(:segment)', 'SupplierController::delete/$1', ['filter' => 'authusermanajerfilter']);
 // pos
 $routes->get('/app/pos', 'POSController::index', ['filter' => 'authuserfilter']);
-$routes->get('/app/pos/(:segment)', 'POSController::show', ['filter' => 'authuserfilter']);
+$routes->get('/app/pos/(:segment)', 'POSController::show/$1', ['filter' => 'authuserfilter']);
+$routes->get('/app/pos/(:segment)/print', 'POSController::print/$1', ['filter' => 'authuserfilter']);
 // pos ajax
 $routes->get('/app/pos/ajax/product-check', 'POSController::ajaxProductCheck', ['filter' => 'authuserfilter']);
 $routes->get('/app/pos/ajax/products', 'POSController::ajaxProductsList', ['filter' => 'authuserfilter']);

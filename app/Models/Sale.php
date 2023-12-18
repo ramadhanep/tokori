@@ -27,6 +27,20 @@ class Sale extends Model
         return $data;
 	}
 
+    public function getPaymentMethod($paymentMethodId)
+    {
+        $db = Database::connect();
+        $productModel = $db->table('payment_methods')->where('id', $paymentMethodId)->get();
+        $db->close();
+        $pm = $productModel->getRowArray();
+
+        if ($pm) {
+            return $pm['name'];
+        }
+
+        return null;
+    }
+
     public function getSaleProducts($transactionId)
     {
         $db = Database::connect();

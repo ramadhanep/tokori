@@ -3,9 +3,6 @@ $profile = new App\Models\User();
 $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
 
 $firstName = explode(" ", $profile['name'])[0];
-
-$setting = new App\Models\Setting();
-$setting = $setting->first();
 ?>
 <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
 	<div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
@@ -13,15 +10,6 @@ $setting = $setting->first();
 			<a href="<?= site_url('/app/pos') ?>" class="app-brand-link">
 				<img src="/logo.png" alt="Tokori" class="w-brand-customer">
 				<span class="app-brand-text demo menu-text fw-bolder ms-2 sm-hidden">Tokori.</span>
-			</a>
-			<i class="mx-2 bx bx-x fw-bold text-primary"></i>
-			<a href="javascript:void(0)" class="d-flex align-items-end gap-1">
-				<?php if (!empty($setting['company_logo'])): ?>
-					<img src="<?= $setting['company_logo'] ? "/img/companies/".$setting['company_logo'] : '/logo.png' ?>" alt="user-avatar" class="d-block rounded object-fit-cover" height="28" width="28" id="form-company-logo-view" />
-				<?php else: ?>
-					<i class="bx bx-buildings bx-sm"></i>
-				<?php endif; ?>
-				<span class="text-primary text-sm fw-bold"><?= $setting['company_name'] ?></span>
 			</a>
 		</div>
 		<ul class="navbar-nav flex-row align-items-center ms-auto">

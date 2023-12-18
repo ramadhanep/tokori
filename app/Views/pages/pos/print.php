@@ -1,4 +1,4 @@
-<?= $this->extend("layouts/pos") ?>
+<?= $this->extend("layouts/blank") ?>
 
 <?= $this->section("title") ?>Detail POS<?= $this->endSection() ?>
 
@@ -11,10 +11,9 @@ $profile = new App\Models\User();
 $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
 ?>
 <div class="container-xxl flex-grow-1 container-p-y">
-	<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Aplikasi / POS/</span> Detail</h4>
-	<div class="row invoice-preview">
+	<div class="row invoice-preview justify-content-center">
 		<div class="col-xl-8 col-md-8 col-12 mb-md-0 mb-4">
-			<div class="card invoice-preview-card">
+			<div class="invoice-preview-card">
 				<div class="card-body">
 					<div class="d-flex justify-content-between flex-xl-row flex-md-column flex-sm-row flex-column">
 						<div class="mb-xl-0">
@@ -112,18 +111,6 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-3 col-md-4 col-12 invoice-actions">
-			<div class="card">
-				<div class="card-body">
-					<a class="btn btn-primary d-grid w-100 mb-3" href="<?= site_url('app/pos/' . $sale['id'] . '/print') ?>" target="_blank">
-						<span class="d-flex align-items-center justify-content-center text-nowrap"><i class="bx bx-paper-plane bx-xs me-1"></i>Cetak Invoice</span>
-					</a>
-					<a class="btn btn-label-secondary d-grid w-100" href="/app/pos">
-						Transaksi Baru
-					</a>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
 <?= $this->endSection() ?>
@@ -131,4 +118,10 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
 <?= $this->section("css") ?>
 <?= $this->endSection() ?>
 <?= $this->section("scripts") ?>
+<script>
+    window.onafterprint = function() {
+        window.close();
+    };
+    window.print();
+</script>
 <?= $this->endSection() ?>
