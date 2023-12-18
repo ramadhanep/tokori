@@ -21,15 +21,14 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
 								<span class="app-brand-logo demo">
 									<?php if (!empty($setting['company_logo'])): ?>
 										<img src="<?= $setting['company_logo'] ? "/img/companies/".$setting['company_logo'] : '/logo.png' ?>" alt="user-avatar" class="d-block rounded object-fit-cover" height="28" width="28" id="form-company-logo-view" />
-									<?php else: ?>
-										<i class="bx bx-buildings bx-sm"></i>
 									<?php endif; ?>
 								</span>
 								<span><?= $setting['company_name'] ?></span>
 							</div>
 						</div>
-						<div>
+						<div class="text-end">
 							<h4 class="mb-0 text-uppercase">#<?= $sale['id'] ?></h4>
+							<span><?= date('d/m/Y', strtotime($sale['created_at'])) ?></span>
 						</div>
 					</div>
 				</div>
