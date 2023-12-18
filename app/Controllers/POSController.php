@@ -20,7 +20,7 @@ class POSController extends BaseController
         $setting = new Setting();
 
         $pass = [
-            'paymentMethods' => $paymentMethod->orderBy('created_at', 'DESC')->findAll(),
+            'paymentMethods' => $paymentMethod->orderBy('id', 'ASC')->findAll(),
             'products' => $product->orderBy('name', 'ASC')->findAll(),
             'ppn' => $setting->orderBy('id', 'ASC')->first()['sales_tax']
         ];

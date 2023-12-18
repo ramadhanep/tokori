@@ -79,7 +79,7 @@ class ProductController extends BaseController
 
         $model->insert($data);
 
-        return redirect()->to('master/products')->with('success', 'Product berhasil ditambahkan');
+        return redirect()->to('master/products')->with('success', 'Produk berhasil ditambahkan');
     }
 
     public function edit($id)
@@ -119,7 +119,7 @@ class ProductController extends BaseController
 
         $model->update($id, $data);
 
-        return redirect()->to('master/products')->with('success', 'Product berhasil diperbarui');
+        return redirect()->to('master/products')->with('success', 'Produk berhasil diperbarui');
     }
 
     public function delete($id)
@@ -127,6 +127,6 @@ class ProductController extends BaseController
         $model = new Product();
         $model->delete($id);
 
-        return redirect()->to('master/products')->with('success', 'Product berhasil dihapus');
+        return redirect()->to('master/products')->with('success', 'Produk berhasil dihapus');
     }
 }

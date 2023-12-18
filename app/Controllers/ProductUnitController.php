@@ -26,7 +26,7 @@ class ProductUnitController extends BaseController
 
         $model->insert($data);
 
-        return redirect()->to('master/product-units')->with('success', 'Unit Product berhasil ditambahkan');
+        return redirect()->to('master/product-units')->with('success', 'Unit Produk berhasil ditambahkan');
     }
 
     public function update($id)
@@ -39,7 +39,7 @@ class ProductUnitController extends BaseController
 
         $model->update($id, $data);
 
-        return redirect()->to('master/product-units')->with('success', 'Unit Product berhasil diperbarui');
+        return redirect()->to('master/product-units')->with('success', 'Unit Produk berhasil diperbarui');
     }
 
     public function delete($id)
@@ -47,6 +47,6 @@ class ProductUnitController extends BaseController
         $model = new ProductUnit();
         $model->delete($id);
 
-        return redirect()->to('master/product-units')->with('success', 'Unit Product berhasil dihapus');
+        return redirect()->to('master/product-units')->with('success', 'Unit Produk berhasil dihapus');
     }
 }

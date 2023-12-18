@@ -26,7 +26,7 @@ class ProductCategoryController extends BaseController
 
         $model->insert($data);
 
-        return redirect()->to('master/product-categories')->with('success', 'Kategori Product berhasil ditambahkan');
+        return redirect()->to('master/product-categories')->with('success', 'Kategori Produk berhasil ditambahkan');
     }
 
     public function update($id)
@@ -39,7 +39,7 @@ class ProductCategoryController extends BaseController
 
         $model->update($id, $data);
 
-        return redirect()->to('master/product-categories')->with('success', 'Kategori Product berhasil diperbarui');
+        return redirect()->to('master/product-categories')->with('success', 'Kategori Produk berhasil diperbarui');
     }
 
     public function delete($id)
@@ -47,6 +47,6 @@ class ProductCategoryController extends BaseController
         $model = new ProductCategory();
         $model->delete($id);
 
-        return redirect()->to('master/product-categories')->with('success', 'Kategori Product berhasil dihapus');
+        return redirect()->to('master/product-categories')->with('success', 'Kategori Produk berhasil dihapus');
     }
 }
