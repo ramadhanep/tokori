@@ -46,62 +46,60 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
 						</div>
 					</div>
 				</div>
-				<div class="table-responsive">
-					<table class="table border-top m-0">
-						<thead>
-							<tr>
-								<th>Produk</th>
-								<th>Harga</th>
-								<th>Jumlah</th>
-								<th>Total</th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php foreach ($model->getSaleProducts($sale['id']) as $index => $item) : ?>
-							<tr>
-								<td class="text-nowrap"><?= $modelSaleProduct->getProduct($item['product_id'])['name'] ?></td>
-								<td><?= rupiahFormat($modelSaleProduct->getProduct($item['product_id'])['price']) ?></td>
-								<td><?= $item['quantity'] ?></td>
-								<td><?= rupiahFormat($item['quantity']*$modelSaleProduct->getProduct($item['product_id'])['price']) ?></td>
-							</tr>
-							<?php endforeach; ?>
-							<tr>
-								<td colspan="2" class="align-top px-4 py-5">
-									<p class="mb-2">
-										<span class="me-1 fw-medium">Kasir:</span>
-										<span><?= $profile['name'] ?></span>
-									</p>
-								</td>
-								<td class="py-5">
-									<div class="d-flex gap-2">
-										<div class="text-end">
-											<p class="mb-2">Bayar:</p>
-											<p class="mb-2">Kembali:</p>
-										</div>
-										<div>
-											<p class="fw-medium mb-2"><?= rupiahFormat($sale['pay_amount']) ?></p>
-											<p class="fw-medium mb-0"><?= rupiahFormat($sale['payback_amount']) ?></p>
-										</div>
+				<table class="table border-top m-0">
+					<thead>
+						<tr>
+							<th>Produk</th>
+							<th>Harga</th>
+							<th>Jumlah</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach ($model->getSaleProducts($sale['id']) as $index => $item) : ?>
+						<tr>
+							<td class="text-nowrap"><?= $modelSaleProduct->getProduct($item['product_id'])['name'] ?></td>
+							<td><?= rupiahFormat($modelSaleProduct->getProduct($item['product_id'])['price']) ?></td>
+							<td><?= $item['quantity'] ?></td>
+							<td><?= rupiahFormat($item['quantity']*$modelSaleProduct->getProduct($item['product_id'])['price']) ?></td>
+						</tr>
+						<?php endforeach; ?>
+						<tr>
+							<td class="align-top px-4 py-5">
+								<p class="mb-2">
+									<span class="me-1 fw-medium">Kasir:</span>
+									<span><?= $profile['name'] ?></span>
+								</p>
+							</td>
+							<td class="py-5">
+								<div class="d-flex justify-content-end gap-2">
+									<div class="text-end">
+										<p class="mb-2">Bayar:</p>
+										<p class="mb-2">Kembali:</p>
 									</div>
-								</td>
-								<td class="py-5">
-									<div class="d-flex gap-2">
-										<div class="text-end">
-											<p class="mb-2">Total:</p>
-											<p class="mb-2">Pajak:</p>
-											<p class="mb-0">Total:</p>
-										</div>
-										<div>
-											<p class="fw-medium mb-2"><?= rupiahFormat($sale['total_sale_amount']) ?></p>
-											<p class="fw-medium mb-2"><?= rupiahFormat($sale['tax_amount']) ?></p>
-											<p class="fw-medium mb-0"><?= rupiahFormat($sale['total_amount']) ?></p>
-										</div>
+									<div>
+										<p class="fw-medium mb-2"><?= rupiahFormat($sale['pay_amount']) ?></p>
+										<p class="fw-medium mb-0"><?= rupiahFormat($sale['payback_amount']) ?></p>
 									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+								</div>
+							</td>
+							<td colspan="2" class="py-5">
+								<div class="d-flex justify-content-end gap-2">
+									<div class="text-end">
+										<p class="mb-2">Total Belanja:</p>
+										<p class="mb-2">Pajak:</p>
+										<p class="mb-0">Total:</p>
+									</div>
+									<div>
+										<p class="fw-medium mb-2"><?= rupiahFormat($sale['total_sale_amount']) ?></p>
+										<p class="fw-medium mb-2"><?= rupiahFormat($sale['tax_amount']) ?></p>
+										<p class="fw-medium mb-0"><?= rupiahFormat($sale['total_amount']) ?></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 				<div class="card-body">
 					<div class="row">
 						<div class="col-12">

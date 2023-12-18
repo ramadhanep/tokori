@@ -1,6 +1,6 @@
-<?= $this->extend("layouts/pos") ?>
+<?= $this->extend("layouts/default") ?>
 
-<?= $this->section("title") ?>Detail POS<?= $this->endSection() ?>
+<?= $this->section("title") ?>Detail Point of Sale<?= $this->endSection() ?>
 
 <?= $this->section("content") ?>
 <?php
@@ -11,9 +11,9 @@ $profile = new App\Models\User();
 $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
 ?>
 <div class="container-xxl flex-grow-1 container-p-y">
-	<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Aplikasi / POS/</span> Detail</h4>
+	<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Aplikasi / Point of Sale/</span> Detail</h4>
 	<div class="row invoice-preview">
-		<div class="col-xl-8 col-md-8 col-12 mb-md-0 mb-4">
+		<div class="col-xl-9 col-md-8 col-12 mb-md-0 mb-4">
 			<div class="card invoice-preview-card">
 				<div class="card-body">
 					<div class="d-flex justify-content-between flex-xl-row flex-md-column flex-sm-row flex-column">
@@ -74,7 +74,7 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
 									</p>
 								</td>
 								<td class="py-5">
-									<div class="d-flex justify-content-end gap-2">
+									<div class="d-flex gap-2">
 										<div class="text-end">
 											<p class="mb-2">Bayar:</p>
 											<p class="mb-2">Kembali:</p>
@@ -86,7 +86,7 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
 									</div>
 								</td>
 								<td class="py-5">
-									<div class="d-flex justify-content-end gap-2">
+									<div class="d-flex gap-2">
 										<div class="text-end">
 											<p class="mb-2">Total Belanja:</p>
 											<p class="mb-2">Pajak:</p>
@@ -116,10 +116,7 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
 			<div class="card">
 				<div class="card-body">
 					<a class="btn btn-primary d-grid w-100 mb-3" href="<?= site_url('app/pos/' . $sale['id'] . '/print') ?>" target="_blank">
-						<span class="d-flex align-items-center justify-content-center text-nowrap"><i class="bx bx-printer bx-xs me-1"></i>Cetak Invoice</span>
-					</a>
-					<a class="btn btn-label-secondary d-grid w-100" href="/app/pos">
-						Transaksi Baru
+						<span class="d-flex align-items-center justify-content-center text-nowrap"><i class="bx bx-paper-plane bx-xs me-1"></i>Cetak Invoice</span>
 					</a>
 				</div>
 			</div>

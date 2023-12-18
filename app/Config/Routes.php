@@ -79,6 +79,9 @@ $routes->get('master/suppliers', 'SupplierController::index', ['filter' => 'auth
 $routes->post('master/suppliers', 'SupplierController::store', ['filter' => 'authusermanajerfilter']);
 $routes->post('master/suppliers/update/(:segment)', 'SupplierController::update/$1', ['filter' => 'authusermanajerfilter']);
 $routes->get('master/suppliers/delete/(:segment)', 'SupplierController::delete/$1', ['filter' => 'authusermanajerfilter']);
+// pos manage
+$routes->get('/point-of-sales', 'POSManageController::index', ['filter' => 'authuserfilter']);
+$routes->get('/point-of-sales/(:segment)', 'POSManageController::show/$1', ['filter' => 'authuserfilter']);
 // pos
 $routes->get('/app/pos', 'POSController::index', ['filter' => 'authuserfilter']);
 $routes->get('/app/pos/(:segment)', 'POSController::show/$1', ['filter' => 'authuserfilter']);
