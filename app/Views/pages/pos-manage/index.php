@@ -26,7 +26,7 @@
                                 <?php foreach ($sales as $index => $item) : ?>
                                     <tr>
                                         <td>#<?= $item['id'] ?></td>
-                                        <td><?= $item['customer_name'] ?></td>
+                                        <td><?= $item['customer_name'] ? $item['customer_name'] : 'Anonim' ?></td>
                                         <td><?= $model->getPaymentMethod($item['payment_method_id']) ?></td>
                                         <td><?= rupiahFormat($item['total_sale_amount']) ?></td>
                                         <td><?= rupiahFormat($item['tax_amount']) ?></td>

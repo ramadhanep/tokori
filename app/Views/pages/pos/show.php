@@ -38,7 +38,7 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
 					<div class="row p-sm-1 p-0">
 						<div class="col-xl-4 col-md-12 col-sm-5 col-12">
 							<h6 class="pb-2">Nama Pelanggan:</h6>
-							<p class="mb-1"><?= $sale['customer_name'] ?></p>
+							<p class="mb-1"><?= $sale['customer_name'] ? $sale['customer_name'] : 'Anonim' ?></p>
 						</div>
 						<div class="col-xl-4 col-md-12 col-sm-5 col-12">
 							<h6 class="pb-2">Metode Pembayaran:</h6>
