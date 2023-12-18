@@ -7,7 +7,7 @@ use CodeIgniter\I18n\Time;
 
 class ReportController extends BaseController
 {
-    public function pointOfSale()
+    public function dailySales()
     {
         $saleModel = new Sale();
         $salesByDate = $saleModel
@@ -46,6 +46,6 @@ class ReportController extends BaseController
             'reports' => $formattedSales,
         ];
 
-        return view('pages/report/point-of-sale', $data);
+        return view('pages/report/daily-sales', $data);
     }
 }

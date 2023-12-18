@@ -74,16 +74,11 @@ $routes->get('master/payment-methods', 'PaymentMethodController::index', ['filte
 $routes->post('master/payment-methods', 'PaymentMethodController::store', ['filter' => 'authusermanajerfilter']);
 $routes->post('master/payment-methods/update/(:segment)', 'PaymentMethodController::update/$1', ['filter' => 'authusermanajerfilter']);
 $routes->get('master/payment-methods/delete/(:segment)', 'PaymentMethodController::delete/$1', ['filter' => 'authusermanajerfilter']);
-// suppliers
-$routes->get('master/suppliers', 'SupplierController::index', ['filter' => 'authusermanajerfilter']);
-$routes->post('master/suppliers', 'SupplierController::store', ['filter' => 'authusermanajerfilter']);
-$routes->post('master/suppliers/update/(:segment)', 'SupplierController::update/$1', ['filter' => 'authusermanajerfilter']);
-$routes->get('master/suppliers/delete/(:segment)', 'SupplierController::delete/$1', ['filter' => 'authusermanajerfilter']);
 // pos manage
 $routes->get('/point-of-sales', 'POSManageController::index', ['filter' => 'authuserfilter']);
 $routes->get('/point-of-sales/(:segment)', 'POSManageController::show/$1', ['filter' => 'authuserfilter']);
 // report pos
-$routes->get('/reports/point-of-sale', 'ReportController::pointOfSale', ['filter' => 'authuserfilter']);
+$routes->get('/reports/daily-sales', 'ReportController::dailySales', ['filter' => 'authuserfilter']);
 
 
 // pos

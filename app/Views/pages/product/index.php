@@ -10,7 +10,7 @@
             <div class="card">
                 <div class="card-header absolute">
                     <a href="<?= site_url('master/products/create') ?>" class="btn btn-primary rounded-pill"><span class="tf-icons bx bx-plus-circle"></span> Tambah Produk</a>
-                    <a href="<?= site_url('master/products/print') ?>" target="_blank" class="btn btn-secondary rounded-pill"><span class="tf-icons bx bx-printer"></span> Cetak Barcode</a>
+                    <a href="<?= site_url('master/products/print') ?>" target="_blank" class="btn btn-outline-secondary rounded-pill ml-10"><span class="tf-icons bx bx-printer"></span> Print Barcode</a>
                 </div>
                 <div class="mt-4 card-body">
                     <div class="table-responsive text-nowrap">

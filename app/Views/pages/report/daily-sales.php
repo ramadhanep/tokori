@@ -1,10 +1,10 @@
 <?= $this->extend("layouts/default") ?>
 
-<?= $this->section("title") ?>Point of Sale<?= $this->endSection() ?>
+<?= $this->section("title") ?>Penjualan Harian<?= $this->endSection() ?>
 
 <?= $this->section("content") ?>
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Laporan /</span> Point of Sale</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Laporan /</span> Penjualan Harian</h4>
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -38,8 +38,8 @@
                                     <th>#</th>
                                     <th>Tanggal</th>
                                     <th>Penjualan</th>
-                                    <th>Pajak per Transaksi</th>
-                                    <th>Pendapatan</th>
+                                    <th>Pajak</th>
+                                    <th>Total Pendapatan</th>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -69,27 +69,39 @@ endif;
 
 <?= $this->section("scripts") ?>
 <script>
-    // Set start date to the first day of the current month
+    // Function to get URL parameters
+    function getUrlParameter(name) {
+        name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // Set start date to the first day of the current month or from the query string
     var startDate = new Date();
-    startDate.setDate(1);
+    var queryStartDate = getUrlParameter('filter-start-date');
+    if (queryStartDate) {
+        startDate = new Date(queryStartDate);
+    } else {
+        startDate.setDate(1);
+    }
     var formattedStartDate = startDate.toISOString().slice(0, 10);
     $('#filter-start-date').val(formattedStartDate);
 
-    // Set end date to the last day of the current month
+    // Set end date to the last day of the current month or from the query string
     var endDate = new Date();
-    endDate.setMonth(endDate.getMonth() + 1);
-    endDate.setDate(0);
+    var queryEndDate = getUrlParameter('filter-end-date');
+    if (queryEndDate) {
+        endDate = new Date(queryEndDate);
+    } else {
+        endDate.setMonth(endDate.getMonth() + 1);
+        endDate.setDate(0);
+    }
     var formattedEndDate = endDate.toISOString().slice(0, 10);
     $('#filter-end-date').val(formattedEndDate);
 
-    // Handle user input and reformat date
-    $('#filter-start-date, #filter-end-date').on('input', function() {
-        var selectedDate = new Date(this.value);
-        var formattedDate = selectedDate.toISOString().slice(0, 10);
-        $(this).val(formattedDate);
-    });
-
     // Datatable
+    var reportTitle = `Laporan Harian (${formattedStartDate} - ${formattedEndDate})`;
     $('.data-table').DataTable({
         ordering: false,
         lengthChange: true,
@@ -99,6 +111,7 @@ endif;
                 extend: "print",
                 text: '<i class="bx bxs-printer me-1" ></i>Print',
                 className: "btn btn-outline-secondary mx-1 rounded-pill",
+                title: reportTitle,
                 exportOptions: {
                     columns: [0, 1, 2, 3, 4],
                 }
@@ -107,6 +120,7 @@ endif;
                 extend: "pdf",
                 text: '<i class="bx bxs-file-pdf me-1" ></i>PDF',
                 className: "btn btn-outline-danger mx-1 rounded-pill",
+                title: reportTitle,
                 exportOptions: {
                     columns: [0, 1, 2, 3, 4],
                 }
@@ -115,6 +129,7 @@ endif;
                 extend: "excel",
                 text: '<i class="bx bx-table me-1" ></i>Excel',
                 className: "btn btn-outline-success mx-1 rounded-pill",
+                title: reportTitle,
                 exportOptions: {
                     columns: [0, 1, 2, 3, 4],
                 }
@@ -123,6 +138,7 @@ endif;
                 extend: "csv",
                 text: '<i class="bx bxs-spreadsheet me-1" ></i>CSV',
                 className: "btn btn-outline-success mx-1 rounded-pill",
+                title: reportTitle,
                 exportOptions: {
                     columns: [0, 1, 2, 3, 4],
                 }

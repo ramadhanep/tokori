@@ -46,12 +46,6 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
         <div data-i18n="Without menu">Point of Sale</div>
       </a>
     </li>
-    <li class="menu-item <?= is_active_menu('stock-adjustments'); ?>">
-      <a href="<?= site_url('stock-adjustments'); ?>" class="menu-link">
-        <i class="menu-icon tf-icons bx bxs-package"></i>
-        <div data-i18n="Without menu">Stock Adjustment</div>
-      </a>
-    </li>
     <?php if ($profile['role'] == 'Manajer') : ?>
       <li class="menu-header small text-uppercase"><span class="menu-header-text">Manajemen</span></li>
       <li class="menu-item <?= is_active_menu('master/products'); ?> <?= is_active_menu('master/product-categories'); ?> <?= is_active_menu('master/product-units'); ?>">
@@ -77,12 +71,6 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
           </li>
         </ul>
       </li>
-      <li class="menu-item <?= is_active_menu('master/suppliers'); ?>">
-        <a href="<?= site_url('master/suppliers'); ?>" class="menu-link">
-          <i class="menu-icon tf-icons bx bxs-user-voice"></i>
-          <div data-i18n="Without menu">Supplier</div>
-        </a>
-      </li>
       <li class="menu-item <?= is_active_menu('master/payment-methods'); ?>">
         <a href="<?= site_url('master/payment-methods'); ?>" class="menu-link">
           <i class="menu-icon tf-icons bx bxs-bank"></i>
@@ -91,20 +79,15 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
       </li>
     <?php endif; ?>
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Laporan</span></li>
-    <li class="menu-item <?= is_active_menu('reports/point-of-sale'); ?> <?= is_active_menu('reports/stock-adjustment'); ?>">
+    <li class="menu-item <?= is_active_menu('reports/point-of-sale'); ?>">
       <a href="javascript:void(0)" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-chart"></i>
         <div data-i18n="Extended UI">Laporan</div>
       </a>
       <ul class="menu-sub">
-        <li class="menu-item <?= is_active_menu('reports/point-of-sale'); ?>">
-          <a href="<?= site_url('reports/point-of-sale'); ?>" class="menu-link">
-            <div data-i18n="Perfect Scrollbar">Point of Sale</div>
-          </a>
-        </li>
-        <li class="menu-item <?= is_active_menu('reports/stock-adjustment'); ?>">
-          <a href="<?= site_url('reports/stock-adjustment'); ?>" class="menu-link">
-            <div data-i18n="Text Divider">Stock Adjustment</div>
+        <li class="menu-item <?= is_active_menu('reports/daily-sale'); ?>">
+          <a href="<?= site_url('reports/daily-sales'); ?>" class="menu-link">
+            <div data-i18n="Perfect Scrollbar">Penjualan Harian</div>
           </a>
         </li>
       </ul>

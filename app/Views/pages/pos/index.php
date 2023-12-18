@@ -89,6 +89,7 @@
 		</div>
 	</div>
 </div>
+<div id="toast-area"></div>
 <?php include 'partials/modal-product-add.php'; ?>
 <?= $this->endSection() ?>
 
@@ -325,10 +326,11 @@
 		formatPayValidation()
 	}
 	$('#display-no-money').hide()
+
 	function formatPayValidation() {
 		const cleanedPrice = $('#form-payment-pay').val().replace(/Rp|\.|,/g, '');
 		const integerValue = parseInt(cleanedPrice, 10);
-		
+
 		const payBack = integerValue - totalAmount;
 		payAmount = integerValue
 		payBackAmount = payBack
@@ -336,14 +338,35 @@
 			$('#display-no-money').hide()
 			$('#display-payback').text('Rp' + formatNumber(payBack));
 			$('#button-submit').attr('disabled', false)
-		}
-		else {
+		} else {
 			if (integerValue) {
 				$('#display-no-money').show()
 			}
 			$('#display-payback').text('Rp0');
 			$('#button-submit').attr('disabled', true)
 		}
+	}
+
+	// Toast
+	function showToast(type, title, msg) {
+		$('#toast-area').html(`
+			<div class="bs-toast toast toast-placement-ex m-2" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">
+				<div class="toast-header">
+					<i class="bx bx-info-circle me-2"></i>
+					<div class="me-auto fw-semibold">${title}</div>
+					<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+				</div>
+				<div class="toast-body">${msg}</div>
+			</div>`)
+		setTimeout(function(e) {
+			const toastPlacementExample = document.querySelector(".toast-placement-ex");
+			selectedType = type;
+			selectedPlacement = ["bottom-0", "start-0"];
+			toastPlacementExample.classList.add(selectedType);
+			DOMTokenList.prototype.add.apply(toastPlacementExample.classList, selectedPlacement);
+			toastPlacement = new bootstrap.Toast(toastPlacementExample);
+			toastPlacement.show();
+		},100)
 	}
 
 	// Barcode listener
@@ -360,6 +383,7 @@
 		if (event.key != 'Shift') barcode += event.key;
 		interval = setInterval(() => barcode = '', 20);
 	});
+
 	function handleBarcode(scannedBarcode) {
 		let existingProduct = productList.find(product => product.code == scannedBarcode);
 
@@ -385,6 +409,9 @@
 						};
 						productList.push(newProduct);
 						loadProductList();
+					}
+					else {
+						showToast("bg-info", "Informasi", "Produk tidak terdaftar!")
 					}
 				}
 			});
@@ -426,7 +453,9 @@
 					title: "Transaksi Berhasil!",
 					text: "Terima kasih! Transaksi penjualan telah berhasil dicatat.",
 					icon: "success",
-					customClass: { confirmButton: "btn btn-primary" },
+					customClass: {
+						confirmButton: "btn btn-primary"
+					},
 					buttonsStyling: false,
 					allowOutsideClick: false,
 				}).then((result) => {
