@@ -134,6 +134,11 @@ class POSController extends BaseController
                     'quantity' => $item['quantity'],
                 ];
                 $saleProduct->insert($saleProductData);
+                
+                $productData = [
+                    'quantity' => $product['quantity'] - $item['quantity']
+                ];
+                $productModel->update($product['id'], $productData);
             }
         }
         
