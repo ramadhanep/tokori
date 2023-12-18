@@ -82,6 +82,10 @@ $routes->get('master/suppliers/delete/(:segment)', 'SupplierController::delete/$
 // pos manage
 $routes->get('/point-of-sales', 'POSManageController::index', ['filter' => 'authuserfilter']);
 $routes->get('/point-of-sales/(:segment)', 'POSManageController::show/$1', ['filter' => 'authuserfilter']);
+// report pos
+$routes->get('/reports/point-of-sale', 'ReportController::pointOfSale', ['filter' => 'authuserfilter']);
+
+
 // pos
 $routes->get('/app/pos', 'POSController::index', ['filter' => 'authuserfilter']);
 $routes->get('/app/pos/(:segment)', 'POSController::show/$1', ['filter' => 'authuserfilter']);

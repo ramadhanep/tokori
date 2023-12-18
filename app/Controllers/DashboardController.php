@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\User;
-use Config\Database;
 
 class DashboardController extends BaseController
 {

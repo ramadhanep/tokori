@@ -19,7 +19,7 @@
                                     <th>Total Belanja</th>
                                     <th>Pajak</th>
                                     <th>Total</th>
-                                    <th width="150" class="text-center">Actions</th>
+                                    <th class="text-center">Actions</th>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">

@@ -91,19 +91,19 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
       </li>
     <?php endif; ?>
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Laporan</span></li>
-    <li class="menu-item <?= is_active_menu('reports/point-of-sales'); ?> <?= is_active_menu('reports/stock-adjustments'); ?> <?= is_active_menu('reports/purchases'); ?>">
+    <li class="menu-item <?= is_active_menu('reports/point-of-sale'); ?> <?= is_active_menu('reports/stock-adjustment'); ?>">
       <a href="javascript:void(0)" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-chart"></i>
         <div data-i18n="Extended UI">Laporan</div>
       </a>
       <ul class="menu-sub">
-        <li class="menu-item <?= is_active_menu('reports/point-of-sales'); ?>">
-          <a href="<?= site_url('reports/point-of-sales'); ?>" class="menu-link">
+        <li class="menu-item <?= is_active_menu('reports/point-of-sale'); ?>">
+          <a href="<?= site_url('reports/point-of-sale'); ?>" class="menu-link">
             <div data-i18n="Perfect Scrollbar">Point of Sale</div>
           </a>
         </li>
-        <li class="menu-item <?= is_active_menu('reports/stock-adjustments'); ?>">
-          <a href="<?= site_url('reports/stock-adjustments'); ?>" class="menu-link">
+        <li class="menu-item <?= is_active_menu('reports/stock-adjustment'); ?>">
+          <a href="<?= site_url('reports/stock-adjustment'); ?>" class="menu-link">
             <div data-i18n="Text Divider">Stock Adjustment</div>
           </a>
         </li>

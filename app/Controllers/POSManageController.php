@@ -4,12 +4,8 @@ namespace App\Controllers;
 
 use CodeIgniter\Exceptions\PageNotFoundException;
 
-use App\Models\PaymentMethod;
-use App\Models\Product;
 use App\Models\Sale;
 use App\Models\SaleProduct;
-use App\Models\Setting;
-use Config\Database;
 
 class POSManageController extends BaseController
 {

@@ -116,7 +116,7 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
 			<div class="card">
 				<div class="card-body">
 					<a class="btn btn-primary d-grid w-100 mb-3" href="<?= site_url('app/pos/' . $sale['id'] . '/print') ?>" target="_blank">
-						<span class="d-flex align-items-center justify-content-center text-nowrap"><i class="bx bx-paper-plane bx-xs me-1"></i>Cetak Invoice</span>
+						<span class="d-flex align-items-center justify-content-center text-nowrap"><i class="bx bx-printer bx-xs me-1"></i>Cetak Invoice</span>
 					</a>
 				</div>
 			</div>

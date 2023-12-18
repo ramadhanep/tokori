@@ -12,34 +12,6 @@
             <p><small><?= $item['name'] ?></small></p>
         </div>
         <?php endforeach; ?>
-        <?php foreach ($products as $index => $item) : ?>
-        <div class="col-3">
-            <img src="<?= $item['barcode'] ?>" alt="<?= $item['name'] ?>" class="d-block object-fit-contain modal-basic-photo-show cursor-pointer" width="100">
-            <small><?= $item['code'] ?></small>
-            <p><small><?= $item['name'] ?></small></p>
-        </div>
-        <?php endforeach; ?>
-        <?php foreach ($products as $index => $item) : ?>
-        <div class="col-3">
-            <img src="<?= $item['barcode'] ?>" alt="<?= $item['name'] ?>" class="d-block object-fit-contain modal-basic-photo-show cursor-pointer" width="100">
-            <small><?= $item['code'] ?></small>
-            <p><small><?= $item['name'] ?></small></p>
-        </div>
-        <?php endforeach; ?>
-        <?php foreach ($products as $index => $item) : ?>
-        <div class="col-3">
-            <img src="<?= $item['barcode'] ?>" alt="<?= $item['name'] ?>" class="d-block object-fit-contain modal-basic-photo-show cursor-pointer" width="100">
-            <small><?= $item['code'] ?></small>
-            <p><small><?= $item['name'] ?></small></p>
-        </div>
-        <?php endforeach; ?>
-        <?php foreach ($products as $index => $item) : ?>
-        <div class="col-3">
-            <img src="<?= $item['barcode'] ?>" alt="<?= $item['name'] ?>" class="d-block object-fit-contain modal-basic-photo-show cursor-pointer" width="100">
-            <small><?= $item['code'] ?></small>
-            <p><small><?= $item['name'] ?></small></p>
-        </div>
-        <?php endforeach; ?>
     </div>
 </div>
 <?= $this->endSection() ?>
