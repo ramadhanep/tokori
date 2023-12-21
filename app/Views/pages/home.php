@@ -68,99 +68,129 @@
 <?= $this->section("scripts") ?>
 <script src="/vendor/libs/apex-charts/apexcharts.js"></script>
 <script>
-"use strict";
+  "use strict";
 
-(function () {
-  // Define colors
-  const cardColor = config.colors.cardColor;
-  const headingColor = config.colors.headingColor;
-  const textMuted = config.colors.textMuted;
-  const borderColor = config.colors.borderColor;
+  (function() {
+    // Define colors
+    const cardColor = config.colors.cardColor;
+    const headingColor = config.colors.headingColor;
+    const textMuted = config.colors.textMuted;
+    const borderColor = config.colors.borderColor;
 
-  // Define gradient colors
-  const gradientShade = "";
-  const gradientShadeIntensity = 0.8;
-  const gradientOpacityFrom = 0.7;
-  const gradientOpacityTo = 0.25;
-  const gradientStops = [0, 95, 100];
+    // Define gradient colors
+    const gradientShade = "";
+    const gradientShadeIntensity = 0.8;
+    const gradientOpacityFrom = 0.7;
+    const gradientOpacityTo = 0.25;
+    const gradientStops = [0, 95, 100];
 
-  // Total Income Chart
-  const totalIncomeChartOptions = {
-    chart: {
-      height: 250,
-      type: "area",
-      toolbar: false,
-      dropShadow: {
-        enabled: true,
-        top: 14,
-        left: 2,
-        blur: 3,
-        color: config.colors.primary,
-        opacity: 0.15,
+    // Total Income Chart
+    const totalIncomeChartOptions = {
+      chart: {
+        height: 250,
+        type: "area",
+        toolbar: false,
+        dropShadow: {
+          enabled: true,
+          top: 14,
+          left: 2,
+          blur: 3,
+          color: config.colors.primary,
+          opacity: 0.15,
+        },
       },
-    },
-    series: [
-      {
+      series: [{
         data: <?= json_encode($salesPerMonthArray) ?>,
         name: "Pendapatan"
+      }, ],
+      dataLabels: {
+        enabled: false
       },
-    ],
-    dataLabels: { enabled: false },
-    stroke: { width: 3, curve: "straight" },
-    colors: [config.colors.primary],
-    fill: {
-      type: "gradient",
-      gradient: {
-        shade: gradientShade,
-        shadeIntensity: gradientShadeIntensity,
-        opacityFrom: gradientOpacityFrom,
-        opacityTo: gradientOpacityTo,
-        stops: gradientStops,
+      stroke: {
+        width: 3,
+        curve: "straight"
       },
-    },
-    grid: {
-      show: true,
-      borderColor: borderColor,
-      padding: { top: -15, bottom: -10, left: 0, right: 0 },
-    },
-    xaxis: {
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "Mei",
-        "Jun",
-        "Jul",
-        "Agt",
-        "Sep",
-        "Okt",
-        "Nov",
-        "Des",
-      ],
-      labels: { offsetX: 0, style: { colors: textMuted, fontSize: "13px" } },
-      axisBorder: { show: false },
-      axisTicks: { show: false },
-      lines: { show: false },
-    },
-    yaxis: {
-      labels: {
-        offsetX: -15,
-        formatter: function (val) {
-          return "Rp" + parseInt(val / 1e6) + "jt";
+      colors: [config.colors.primary],
+      fill: {
+        type: "gradient",
+        gradient: {
+          shade: gradientShade,
+          shadeIntensity: gradientShadeIntensity,
+          opacityFrom: gradientOpacityFrom,
+          opacityTo: gradientOpacityTo,
+          stops: gradientStops,
         },
-        style: { fontSize: "13px", colors: textMuted },
       },
-      tickAmount: 5,
-    },
-  };
+      grid: {
+        show: true,
+        borderColor: borderColor,
+        padding: {
+          top: -15,
+          bottom: -10,
+          left: 0,
+          right: 0
+        },
+      },
+      xaxis: {
+        categories: [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "Mei",
+          "Jun",
+          "Jul",
+          "Agt",
+          "Sep",
+          "Okt",
+          "Nov",
+          "Des",
+        ],
+        labels: {
+          offsetX: 0,
+          style: {
+            colors: textMuted,
+            fontSize: "13px"
+          }
+        },
+        axisBorder: {
+          show: false
+        },
+        axisTicks: {
+          show: false
+        },
+        lines: {
+          show: false
+        },
+      },
+      yaxis: {
+        labels: {
+          offsetX: -15,
+          formatter: function(val) {
+            if (Math.abs(val) >= 1e9) {
+              return "Rp" + parseInt(val / 1e9) + "M";
+            } else if (Math.abs(val) >= 1e6) {
+              return "Rp" + parseInt(val / 1e6) + "jt";
+            } else if (Math.abs(val) >= 1e3) {
+              return "Rp" + parseInt(val / 1e3) + "rb";
+            } else {
+              return val;
+            }
+          },
+          style: {
+            fontSize: "13px",
+            colors: textMuted
+          },
+        },
+        tickAmount: 5,
+      },
+    };
 
-  const totalIncomeChartElement = document.querySelector("#totalIncomeChart");
-  if (totalIncomeChartElement) {
-    new ApexCharts(totalIncomeChartElement, totalIncomeChartOptions).render();
-  }
+    const totalIncomeChartElement = document.querySelector("#totalIncomeChart");
+    if (totalIncomeChartElement) {
+      new ApexCharts(totalIncomeChartElement, totalIncomeChartOptions).render();
+    }
 
-})();
-
+  })();
 </script>
 <?= $this->endSection() ?>

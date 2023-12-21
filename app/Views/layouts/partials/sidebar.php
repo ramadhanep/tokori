@@ -79,7 +79,7 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
       </li>
     <?php endif; ?>
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Laporan</span></li>
-    <li class="menu-item <?= is_active_menu('reports/daily-sale'); ?> <?= is_active_menu('reports/best-seller-product'); ?>">
+    <li class="menu-item <?= is_active_menu('reports/daily-sale'); ?> <?= is_active_menu('reports/best-selling-product'); ?>">
       <a href="javascript:void(0)" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-chart"></i>
         <div data-i18n="Extended UI">Laporan</div>

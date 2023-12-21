@@ -28,7 +28,7 @@ $profile = $profile->find(session()->get('SES_AUTH_USER_ID'));
 						</div>
 						<div class="text-end">
 							<h4 class="mb-0 text-uppercase">#<?= $sale['id'] ?></h4>
-							<span><?= date('d/m/Y', strtotime($sale['created_at'])) ?></span>
+							<span><?= date('d/m/Y H:i:s', strtotime($sale['created_at'])) ?></span>
 						</div>
 					</div>
 				</div>
