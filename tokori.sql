@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 19, 2023 at 02:16 AM
+-- Generation Time: Dec 21, 2023 at 04:58 PM
 -- Server version: 8.0.34-0ubuntu0.22.04.1
 -- PHP Version: 8.0.30
 
@@ -103,14 +103,14 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `product_category_id`, `product_unit_id`, `code`, `name`, `photo`, `price`, `quantity`, `created_at`, `updated_at`, `deleted_at`) VALUES
-('P000000001', 'PC00000001', 'PU00000001', '8886015203115', 'Good Time (Double Choc)', '1702925638_24b644790b381b544f14.jpg', '15000.00', 150, '2023-12-18 18:53:20', '2023-12-18 18:53:58', NULL),
-('P000000002', 'PC00000001', 'PU00000002', '8993175540797', 'Nextar Brownies', '1702925685_d161aedaff0250cba6fb.jpg', '25000.00', 200, '2023-12-18 18:54:45', '2023-12-18 18:54:45', NULL),
-('P000000003', 'PC00000012', 'PU00000002', '8996001355978', 'Beng-beng Share it', '1702925830_8e12b573fcca8f7b8149.jpg', '20000.00', 120, '2023-12-18 18:57:10', '2023-12-18 18:57:10', NULL),
-('P000000004', 'PC00000012', 'PU00000001', '089686598056', 'Chitato Beef Edition 68gr', '1702926099_cc8c1da3869e9f94a072.jpg', '9000.00', 250, '2023-12-18 19:01:39', '2023-12-18 19:01:39', NULL),
+('P000000001', 'PC00000001', 'PU00000001', '8886015203115', 'Good Time (Double Choc)', '1702925638_24b644790b381b544f14.jpg', '15000.00', 134, '2023-12-18 18:53:20', '2023-12-21 09:57:42', NULL),
+('P000000002', 'PC00000001', 'PU00000002', '8993175540797', 'Nextar Brownies', '1702925685_d161aedaff0250cba6fb.jpg', '25000.00', 183, '2023-12-18 18:54:45', '2023-12-21 09:57:42', NULL),
+('P000000003', 'PC00000012', 'PU00000002', '8996001355978', 'Beng-beng Share it', '1702925830_8e12b573fcca8f7b8149.jpg', '20000.00', 112, '2023-12-18 18:57:10', '2023-12-20 21:09:11', NULL),
+('P000000004', 'PC00000012', 'PU00000001', '089686598056', 'Chitato Beef Edition 68gr', '1702926099_cc8c1da3869e9f94a072.jpg', '9000.00', 244, '2023-12-18 19:01:39', '2023-12-18 20:04:23', NULL),
 ('P000000005', 'PC00000012', 'PU00000001', '8997032680985', 'Taro Tempe Himalayan Salt 50gr', '1702926190_91ede50d04bd446b023d.jpg', '9500.00', 200, '2023-12-18 19:03:06', '2023-12-18 19:03:10', NULL),
 ('P000000006', 'PC00000012', 'PU00000001', '8992775001042', 'Garuda Pilus Mi Goreng 95gr', '1702926323_370413bf8aa2ca72d514.jpg', '8000.00', 100, '2023-12-18 19:05:15', '2023-12-18 19:05:23', NULL),
-('P000000007', 'PC00000001', 'PU00000001', '8888166336605', 'NISSIN Wafers Chocolate 110gr', '1702926410_0447f72fd96ec7f14ccd.jpg', '9000.00', 100, '2023-12-18 19:06:50', '2023-12-18 19:06:50', NULL),
-('P000000008', 'PC00000012', 'PU00000002', '8991102230308', 'Permen BLASTER', '1702926500_74ff286ce1cc8574ded7.jpg', '7500.00', 100, '2023-12-18 19:08:20', '2023-12-18 19:08:20', NULL);
+('P000000007', 'PC00000001', 'PU00000001', '8888166336605', 'NISSIN Wafers Chocolate 110gr', '1702926410_0447f72fd96ec7f14ccd.jpg', '9000.00', 97, '2023-12-18 19:06:50', '2023-12-21 09:57:42', NULL),
+('P000000008', 'PC00000012', 'PU00000002', '8991102230308', 'Permen BLASTER', '1702926500_74ff286ce1cc8574ded7.jpg', '7500.00', 83, '2023-12-18 19:08:20', '2023-12-21 09:57:42', NULL);
 
 -- --------------------------------------------------------
 
@@ -195,6 +195,17 @@ CREATE TABLE `sales` (
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
+--
+-- Dumping data for table `sales`
+--
+
+INSERT INTO `sales` (`id`, `payment_method_id`, `customer_name`, `total_sale_amount`, `tax_amount`, `total_amount`, `pay_amount`, `payback_amount`, `created_at`, `updated_at`, `deleted_at`) VALUES
+('5sKwulttAu', 'PYMT0001', '', '108000.00', '11880.00', '119880.00', '120000.00', '120.00', '2023-12-20 21:09:11', '2023-12-20 21:09:11', NULL),
+('6bc9G3MJI0', 'PYMT0001', NULL, '274000.00', '30140.00', '304140.00', '310000.00', '5860.00', '2023-12-18 20:04:23', '2023-12-18 20:04:23', NULL),
+('mVfwER03oI', 'PYMT0001', '', '261500.00', '28765.00', '290265.00', '300000.00', '9735.00', '2023-12-21 09:57:42', '2023-12-21 09:57:42', NULL),
+('onEc0Kc171', 'PYMT0001', 'Rizky', '325000.00', '35750.00', '360750.00', '365000.00', '4250.00', '2023-12-20 05:27:21', '2023-12-20 05:27:21', NULL),
+('T6urJ8MLkF', 'PYMT0004', '', '65000.00', '7150.00', '72150.00', '100000.00', '27850.00', '2023-12-21 03:27:18', '2023-12-21 03:27:18', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -210,6 +221,26 @@ CREATE TABLE `sale_products` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+--
+-- Dumping data for table `sale_products`
+--
+
+INSERT INTO `sale_products` (`id`, `sales_id`, `product_id`, `quantity`, `created_at`, `updated_at`, `deleted_at`) VALUES
+('09OvEchboC', 'mVfwER03oI', 'P000000001', '6', '2023-12-21 09:57:42', '2023-12-21 09:57:42', NULL),
+('5dbioLesQF', '6bc9G3MJI0', 'P000000003', '5', '2023-12-18 20:04:23', '2023-12-18 20:04:23', NULL),
+('bQLuaSybwE', 'onEc0Kc171', 'P000000008', '10', '2023-12-20 05:27:21', '2023-12-20 05:27:21', NULL),
+('CeUsqqLmG9', '6bc9G3MJI0', 'P000000004', '6', '2023-12-18 20:04:23', '2023-12-18 20:04:23', NULL),
+('IXtNqz5QS9', 'mVfwER03oI', 'P000000002', '5', '2023-12-21 09:57:42', '2023-12-21 09:57:42', NULL),
+('jSFQ4D3sdp', 'T6urJ8MLkF', 'P000000008', '2', '2023-12-21 03:27:18', '2023-12-21 03:27:18', NULL),
+('L40DxE59SX', 'mVfwER03oI', 'P000000008', '5', '2023-12-21 09:57:42', '2023-12-21 09:57:42', NULL),
+('lcABXumtBh', 'mVfwER03oI', 'P000000007', '1', '2023-12-21 09:57:42', '2023-12-21 09:57:42', NULL),
+('m1zthwAZYC', '5sKwulttAu', 'P000000003', '3', '2023-12-20 21:09:11', '2023-12-20 21:09:11', NULL),
+('MTaumlcMFn', 'T6urJ8MLkF', 'P000000002', '2', '2023-12-21 03:27:18', '2023-12-21 03:27:18', NULL),
+('P1ELW4iLgA', '6bc9G3MJI0', 'P000000001', '8', '2023-12-18 20:04:23', '2023-12-18 20:04:23', NULL),
+('r5WIYiFpD4', '5sKwulttAu', 'P000000001', '2', '2023-12-20 21:09:11', '2023-12-20 21:09:11', NULL),
+('vppNuMLFOu', '5sKwulttAu', 'P000000007', '2', '2023-12-20 21:09:11', '2023-12-20 21:09:11', NULL),
+('z7yFiTkFVY', 'onEc0Kc171', 'P000000002', '10', '2023-12-20 05:27:21', '2023-12-20 05:27:21', NULL);
 
 -- --------------------------------------------------------
 
@@ -232,7 +263,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `company_name`, `company_logo`, `sales_tax`, `created_at`, `updated_at`, `deleted_at`) VALUES
-('ST00000001', 'Tokori Store', NULL, 11, '2023-12-18 18:53:20', '2023-12-18 18:53:20', NULL);
+('ST00000001', 'Sumber Berkah Jaya', '1702929452_b216df86716441bb4cb9.png', 11, '2023-12-18 18:53:20', '2023-12-20 21:04:39', NULL);
 
 -- --------------------------------------------------------
 
@@ -259,7 +290,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `role`, `name`, `email`, `photo`, `is_active`, `password`, `created_at`, `updated_at`, `deleted_at`) VALUES
 ('3BJKz2cIQT', 'Kasir', 'Fiqri', 'fiqri@tokori.id', NULL, 1, '$2y$10$hKoas.68TToT5H5gulPTFeT0.zP0js4wzFgxrk/zDo.bVmuy8seuW', '2023-12-18 18:53:20', '2023-12-18 18:53:20', NULL),
-('o4reNSoSWK', 'Manajer', 'Ramadhan', 'ramadhan@tokori.id', NULL, 1, '$2y$10$PZdtI000XWK3hmvUxIb1L.KRM.Tqo2vczNl2DW2RBLjwBVNKG2AA.', '2023-12-18 18:53:20', '2023-12-18 18:53:20', NULL);
+('o4reNSoSWK', 'Manajer', 'Ramadhan Edy', 'ramadhan@tokori.id', NULL, 1, '$2y$10$PZdtI000XWK3hmvUxIb1L.KRM.Tqo2vczNl2DW2RBLjwBVNKG2AA.', '2023-12-18 18:53:20', '2023-12-20 20:56:39', NULL);
 
 --
 -- Indexes for dumped tables
